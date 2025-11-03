@@ -2,8 +2,25 @@
 {
     "departamentos": [
         {
+            "codigo": "91",
+            "nombre": "AMAZONAS",
+            "capital": "Leticia",
+            "municipios": [
+                {
+                    "codigo": "91001",
+                    "nombre": "Leticia",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "91536",
+                    "nombre": "Puerto Nariño",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
             "codigo": "05",
-            "nombre": "Antioquia",
+            "nombre": "ANTIOQUIA",
             "capital": "Medellín",
             "municipios": [
                 {
@@ -857,8 +874,67 @@
             ]
         },
         {
+            "codigo": "81",
+            "nombre": "ARAUCA",
+            "capital": "Arauca",
+            "municipios": [
+                {
+                    "codigo": "81001",
+                    "nombre": "Arauca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "81065",
+                    "nombre": "Arauquita",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "81220",
+                    "nombre": "Cravo Norte",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "81300",
+                    "nombre": "Fortul",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "81591",
+                    "nombre": "Puerto Rondón",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "81736",
+                    "nombre": "Saravena",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "81794",
+                    "nombre": "Tame",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
+            "codigo": "88",
+            "nombre": "ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",
+            "capital": "San Andrés",
+            "municipios": [
+                {
+                    "codigo": "88001",
+                    "nombre": "San Andrés",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "88564",
+                    "nombre": "Providencia",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
             "codigo": "08",
-            "nombre": "Atlántico",
+            "nombre": "ATLÁNTICO",
             "capital": "Barranquilla",
             "municipios": [
                 {
@@ -1027,8 +1103,590 @@
             ]
         },
         {
+            "codigo": "25",
+            "nombre": "CUNDINAMARCA",
+            "capital": "Bogotá, D.C.",
+            "municipios": [
+                {
+                    "codigo": "25001",
+                    "nombre": "Agua de Dios",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25019",
+                    "nombre": "Albán",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25035",
+                    "nombre": "Anapoima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25040",
+                    "nombre": "Anolaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25053",
+                    "nombre": "Apulo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25086",
+                    "nombre": "Arbeláez",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25095",
+                    "nombre": "Beltrán",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25099",
+                    "nombre": "Bituima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25120",
+                    "nombre": "Bojacá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25123",
+                    "nombre": "Cabrera",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25126",
+                    "nombre": "Cachipay",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25148",
+                    "nombre": "Cajicá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25151",
+                    "nombre": "Caparrapí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25154",
+                    "nombre": "Cáqueza",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25168",
+                    "nombre": "Carmen de Carupa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25175",
+                    "nombre": "Chaguaní",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25178",
+                    "nombre": "Chía",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25181",
+                    "nombre": "Chipaque",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25183",
+                    "nombre": "Choachí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25185",
+                    "nombre": "Chocontá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25187",
+                    "nombre": "Cogua",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25191",
+                    "nombre": "Cota",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25196",
+                    "nombre": "Cucunubá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25200",
+                    "nombre": "El Colegio",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25214",
+                    "nombre": "El Peñón",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25224",
+                    "nombre": "El Rosal",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25245",
+                    "nombre": "Facatativá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25258",
+                    "nombre": "Fómeque",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25260",
+                    "nombre": "Fosca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25269",
+                    "nombre": "Funza",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25279",
+                    "nombre": "Fúquene",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25281",
+                    "nombre": "Fusagasugá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25286",
+                    "nombre": "Gachalá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25288",
+                    "nombre": "Gachancipá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25290",
+                    "nombre": "Gachetá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25293",
+                    "nombre": "Gama",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25295",
+                    "nombre": "Girardot",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25297",
+                    "nombre": "Granada",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25299",
+                    "nombre": "Guachetá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25307",
+                    "nombre": "Guaduas",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25312",
+                    "nombre": "Guasca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25317",
+                    "nombre": "Guataquí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25320",
+                    "nombre": "Guatavita",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25322",
+                    "nombre": "Guayabal de Síquima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25324",
+                    "nombre": "Guayabetal",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25326",
+                    "nombre": "Gutiérrez",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25328",
+                    "nombre": "Jerusalén",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25335",
+                    "nombre": "Junín",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25339",
+                    "nombre": "La Calera",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25349",
+                    "nombre": "La Mesa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25351",
+                    "nombre": "La Palma",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25353",
+                    "nombre": "La Peña",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25357",
+                    "nombre": "La Vega",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25359",
+                    "nombre": "Lenguazaque",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25361",
+                    "nombre": "Machetá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25368",
+                    "nombre": "Madrid",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25372",
+                    "nombre": "Manta",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25377",
+                    "nombre": "Medina",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25386",
+                    "nombre": "Mosquera",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25394",
+                    "nombre": "Nariño",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25398",
+                    "nombre": "Nemocón",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25402",
+                    "nombre": "Nilo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25407",
+                    "nombre": "Nimaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25426",
+                    "nombre": "Nocaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25430",
+                    "nombre": "Pacho",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25436",
+                    "nombre": "Paime",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25438",
+                    "nombre": "Pandi",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25440",
+                    "nombre": "Paratebueno",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25473",
+                    "nombre": "Pasca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25483",
+                    "nombre": "Puerto Salgar",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25486",
+                    "nombre": "Pulí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25488",
+                    "nombre": "Quebradanegra",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25489",
+                    "nombre": "Quetame",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25491",
+                    "nombre": "Quipile",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25506",
+                    "nombre": "Ricaurte",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25513",
+                    "nombre": "San Antonio del Tequendama",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25518",
+                    "nombre": "San Bernardo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25524",
+                    "nombre": "San Cayetano",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25530",
+                    "nombre": "San Francisco",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25535",
+                    "nombre": "San Juan de Río Seco",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25572",
+                    "nombre": "Sasaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25580",
+                    "nombre": "Sesquilé",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25592",
+                    "nombre": "Sibaté",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25594",
+                    "nombre": "Silvania",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25596",
+                    "nombre": "Simijaca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25599",
+                    "nombre": "Soacha",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25612",
+                    "nombre": "Sopó",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25645",
+                    "nombre": "Subachoque",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25649",
+                    "nombre": "Suesca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25653",
+                    "nombre": "Supatá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25658",
+                    "nombre": "Susa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25662",
+                    "nombre": "Sutatausa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25667",
+                    "nombre": "Tabio",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25669",
+                    "nombre": "Tausa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25674",
+                    "nombre": "Tena",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25681",
+                    "nombre": "Tenjo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25685",
+                    "nombre": "Tibacuy",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25686",
+                    "nombre": "Tibirita",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25695",
+                    "nombre": "Tocaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25698",
+                    "nombre": "Tocancipá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25718",
+                    "nombre": "Topaipí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25736",
+                    "nombre": "Ubalá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25740",
+                    "nombre": "Ubaque",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25743",
+                    "nombre": "Ubaté",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25745",
+                    "nombre": "Une",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25754",
+                    "nombre": "Útica",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25758",
+                    "nombre": "Vergara",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25769",
+                    "nombre": "Vianí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25772",
+                    "nombre": "Villagómez",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25777",
+                    "nombre": "Villapinzón",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25779",
+                    "nombre": "Villeta",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25781",
+                    "nombre": "Viotá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25785",
+                    "nombre": "Yacopí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25793",
+                    "nombre": "Zipacón",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "25797",
+                    "nombre": "Zipaquirá",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
             "codigo": "11",
-            "nombre": "Bogotá, D.C.",
+            "nombre": "BOGOTÁ, D. C.",
             "tipo": "distrito_capital",
             "localidades": [
                 {
@@ -1150,6 +1808,666 @@
                     "nombre": "Sumapaz",
                     "tipo": "localidad",
                     "veredas": ["Sumapaz", "El Uvito", "La Unión", "El Tobal", "La Cristalina", "El Hato", "La Pampa", "El Triunfo"]
+                }
+            ]
+        },
+        {
+            "codigo": "70",
+            "nombre": "SUCRE",
+            "capital": "Sincelejo",
+            "municipios": [
+                {
+                    "codigo": "70001",
+                    "nombre": "Sincelejo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70110",
+                    "nombre": "Buenavista",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70124",
+                    "nombre": "Caimito",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70204",
+                    "nombre": "Chalán",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70215",
+                    "nombre": "Coloso",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70221",
+                    "nombre": "Corozal",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70230",
+                    "nombre": "Coveñas",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70233",
+                    "nombre": "El Roble",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70235",
+                    "nombre": "Galeras",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70265",
+                    "nombre": "Guaranda",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70400",
+                    "nombre": "La Unión",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70418",
+                    "nombre": "Los Palmitos",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70429",
+                    "nombre": "Majagual",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70473",
+                    "nombre": "Morroa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70508",
+                    "nombre": "Ovejas",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70523",
+                    "nombre": "Palmito",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70670",
+                    "nombre": "Sampués",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70678",
+                    "nombre": "San Benito Abad",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70702",
+                    "nombre": "San Juan de Betulia",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70708",
+                    "nombre": "San Marcos",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70713",
+                    "nombre": "San Onofre",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70717",
+                    "nombre": "San Pedro",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70742",
+                    "nombre": "San Luis de Sincé",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70771",
+                    "nombre": "Sucre",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70820",
+                    "nombre": "Santiago de Tolú",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "70823",
+                    "nombre": "Tolú Viejo",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
+            "codigo": "73",
+            "nombre": "TOLIMA",
+            "capital": "Ibagué",
+            "municipios": [
+                {
+                    "codigo": "73001",
+                    "nombre": "Ibagué",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73024",
+                    "nombre": "Alpujarra",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73026",
+                    "nombre": "Alvarado",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73030",
+                    "nombre": "Ambalema",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73043",
+                    "nombre": "Anzoátegui",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73055",
+                    "nombre": "Armero",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73067",
+                    "nombre": "Ataco",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73124",
+                    "nombre": "Cajamarca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73148",
+                    "nombre": "Carmen de Apicalá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73152",
+                    "nombre": "Casabianca",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73168",
+                    "nombre": "Chaparral",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73200",
+                    "nombre": "Coello",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73217",
+                    "nombre": "Coyaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73226",
+                    "nombre": "Cunday",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73236",
+                    "nombre": "Dolores",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73268",
+                    "nombre": "Espinal",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73270",
+                    "nombre": "Falan",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73275",
+                    "nombre": "Flandes",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73283",
+                    "nombre": "Fresno",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73319",
+                    "nombre": "Guamo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73347",
+                    "nombre": "Herveo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73349",
+                    "nombre": "Honda",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73352",
+                    "nombre": "Icononzo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73408",
+                    "nombre": "Lérida",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73411",
+                    "nombre": "Líbano",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73443",
+                    "nombre": "Mariquita",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73449",
+                    "nombre": "Melgar",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73461",
+                    "nombre": "Murillo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73483",
+                    "nombre": "Natagaima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73504",
+                    "nombre": "Ortega",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73520",
+                    "nombre": "Palocabildo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73547",
+                    "nombre": "Piedras",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73555",
+                    "nombre": "Planadas",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73563",
+                    "nombre": "Prado",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73585",
+                    "nombre": "Purificación",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73616",
+                    "nombre": "Rioblanco",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73622",
+                    "nombre": "Roncesvalles",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73624",
+                    "nombre": "Rovira",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73671",
+                    "nombre": "Saldaña",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73675",
+                    "nombre": "San Antonio",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73678",
+                    "nombre": "San Luis",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73686",
+                    "nombre": "Santa Isabel",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73770",
+                    "nombre": "Suárez",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73854",
+                    "nombre": "Valle de San Juan",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73861",
+                    "nombre": "Venadillo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73870",
+                    "nombre": "Villahermosa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "73873",
+                    "nombre": "Villarrica",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
+            "codigo": "76",
+            "nombre": "VALLE DEL CAUCA",
+            "capital": "Cali",
+            "municipios": [
+                {
+                    "codigo": "76001",
+                    "nombre": "Cali",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76020",
+                    "nombre": "Alcalá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76036",
+                    "nombre": "Andalucía",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76041",
+                    "nombre": "Ansermanuevo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76054",
+                    "nombre": "Argelia",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76100",
+                    "nombre": "Bolívar",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76109",
+                    "nombre": "Buenaventura",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76111",
+                    "nombre": "Guadalajara de Buga",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76113",
+                    "nombre": "Bugalagrande",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76122",
+                    "nombre": "Caicedonia",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76126",
+                    "nombre": "Calima",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76130",
+                    "nombre": "Candelaria",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76147",
+                    "nombre": "Cartago",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76233",
+                    "nombre": "Dagua",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76243",
+                    "nombre": "El Águila",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76246",
+                    "nombre": "El Cairo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76248",
+                    "nombre": "El Cerrito",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76250",
+                    "nombre": "El Dovio",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76275",
+                    "nombre": "Florida",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76306",
+                    "nombre": "Ginebra",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76318",
+                    "nombre": "Guacarí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76364",
+                    "nombre": "Jamundí",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76377",
+                    "nombre": "La Cumbre",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76400",
+                    "nombre": "La Unión",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76403",
+                    "nombre": "La Victoria",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76497",
+                    "nombre": "Obando",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76520",
+                    "nombre": "Palmira",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76563",
+                    "nombre": "Pradera",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76606",
+                    "nombre": "Restrepo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76616",
+                    "nombre": "Riofrío",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76622",
+                    "nombre": "Roldanillo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76670",
+                    "nombre": "San Pedro",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76736",
+                    "nombre": "Sevilla",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76823",
+                    "nombre": "Toro",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76828",
+                    "nombre": "Trujillo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76834",
+                    "nombre": "Tuluá",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76845",
+                    "nombre": "Ulloa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76863",
+                    "nombre": "Versalles",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76869",
+                    "nombre": "Vijes",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76890",
+                    "nombre": "Yotoco",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76892",
+                    "nombre": "Yumbo",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "76895",
+                    "nombre": "Zarzal",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
+            "codigo": "97",
+            "nombre": "VAUPÉS",
+            "capital": "Mitú",
+            "municipios": [
+                {
+                    "codigo": "97001",
+                    "nombre": "Mitú",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "97161",
+                    "nombre": "Caruru",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "97511",
+                    "nombre": "Pacoa",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "97666",
+                    "nombre": "Papunaua",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "97777",
+                    "nombre": "Taraira",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "97889",
+                    "nombre": "Yavaraté",
+                    "tipo": "municipio"
+                }
+            ]
+        },
+        {
+            "codigo": "99",
+            "nombre": "VICHADA",
+            "capital": "Puerto Carreño",
+            "municipios": [
+                {
+                    "codigo": "99001",
+                    "nombre": "Puerto Carreño",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "99524",
+                    "nombre": "La Primavera",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "99624",
+                    "nombre": "Santa Rosalía",
+                    "tipo": "municipio"
+                },
+                {
+                    "codigo": "99773",
+                    "nombre": "Cumaribo",
+                    "tipo": "municipio"
                 }
             ]
         }
