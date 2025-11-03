@@ -3,6 +3,11 @@ let votantes = [];
 let candidatos = [];
 let votos = {};
 let votanteActual = null;
+let verificacionBiometrica = {
+    facial: false,
+    huella: false
+};
+let stream = null;
 
 // Departamentos de Colombia
 const departamentos = [
@@ -74,6 +79,10 @@ function configurarFormularios() {
 
     // Botón de leer documento
     document.getElementById('btn-leer-documento').addEventListener('click', simularLecturaDocumento);
+
+    // Botones de verificación biométrica
+    document.getElementById('btn-capturar-foto').addEventListener('click', capturarFotoFacial);
+    document.getElementById('btn-verificar-huella').addEventListener('click', verificarHuella);
 }
 
 // Registrar votante
@@ -165,7 +174,9 @@ function verificarCedula() {
 
     votanteActual = votante;
     mostrarDatosVotante(votante);
-    document.getElementById('btn-votar').disabled = false;
+    mostrarVerificacionBiometrica();
+    inicializarCamara();
+    resetearVerificacionBiometrica();
 }
 
 // Mostrar datos del votante
@@ -181,8 +192,125 @@ function mostrarDatosVotante(votante) {
 // Ocultar datos del votante
 function ocultarDatosVotante() {
     document.getElementById('datos-votante').style.display = 'none';
+    document.getElementById('verificacion-biometrica').style.display = 'none';
     document.getElementById('btn-votar').disabled = true;
     votanteActual = null;
+    detenerCamara();
+    resetearVerificacionBiometrica();
+}
+
+// Mostrar verificación biométrica
+function mostrarVerificacionBiometrica() {
+    document.getElementById('verificacion-biometrica').style.display = 'block';
+}
+
+// Inicializar cámara
+async function inicializarCamara() {
+    try {
+        stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const video = document.getElementById('video-camara');
+        video.srcObject = stream;
+    } catch (error) {
+        console.error('Error al acceder a la cámara:', error);
+        alert('No se pudo acceder a la cámara. Verificación facial no disponible.');
+    }
+}
+
+// Detener cámara
+function detenerCamara() {
+    if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+        stream = null;
+    }
+}
+
+// Capturar foto facial
+function capturarFotoFacial() {
+    const video = document.getElementById('video-camara');
+    const canvas = document.getElementById('canvas-captura');
+    const estadoFacial = document.getElementById('estado-facial');
+
+    if (!video.srcObject) {
+        alert('Cámara no disponible');
+        return;
+    }
+
+    estadoFacial.textContent = 'Procesando...';
+    estadoFacial.setAttribute('data-estado', 'procesando');
+
+    // Simular procesamiento
+    setTimeout(() => {
+        const context = canvas.getContext('2d');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        // Simular verificación exitosa (90% de probabilidad)
+        const exito = Math.random() > 0.1;
+        if (exito) {
+            estadoFacial.textContent = 'Verificado ✓';
+            estadoFacial.setAttribute('data-estado', 'verificado');
+            verificacionBiometrica.facial = true;
+        } else {
+            estadoFacial.textContent = 'Error - Reintente';
+            estadoFacial.setAttribute('data-estado', 'error');
+            verificacionBiometrica.facial = false;
+        }
+        actualizarEstadoGeneral();
+    }, 2000);
+}
+
+// Verificar huella dactilar
+function verificarHuella() {
+    const estadoHuella = document.getElementById('estado-huella');
+
+    estadoHuella.textContent = 'Procesando...';
+    estadoHuella.setAttribute('data-estado', 'procesando');
+
+    // Simular procesamiento de huella
+    setTimeout(() => {
+        // Simular verificación exitosa (85% de probabilidad)
+        const exito = Math.random() > 0.15;
+        if (exito) {
+            estadoHuella.textContent = 'Verificado ✓';
+            estadoHuella.setAttribute('data-estado', 'verificado');
+            verificacionBiometrica.huella = true;
+        } else {
+            estadoHuella.textContent = 'Error - Reintente';
+            estadoHuella.setAttribute('data-estado', 'error');
+            verificacionBiometrica.huella = false;
+        }
+        actualizarEstadoGeneral();
+    }, 1500);
+}
+
+// Resetear verificación biométrica
+function resetearVerificacionBiometrica() {
+    verificacionBiometrica.facial = false;
+    verificacionBiometrica.huella = false;
+
+    document.getElementById('estado-facial').textContent = 'Pendiente';
+    document.getElementById('estado-facial').setAttribute('data-estado', 'pendiente');
+    document.getElementById('estado-huella').textContent = 'Pendiente';
+    document.getElementById('estado-huella').setAttribute('data-estado', 'pendiente');
+
+    actualizarEstadoGeneral();
+}
+
+// Actualizar estado general de verificación
+function actualizarEstadoGeneral() {
+    const estadoGeneral = document.getElementById('estado-verificacion');
+    const contenedorEstado = document.getElementById('estado-general');
+
+    if (verificacionBiometrica.facial && verificacionBiometrica.huella) {
+        estadoGeneral.textContent = 'Completo';
+        contenedorEstado.setAttribute('data-estado', 'completo');
+        document.getElementById('btn-votar').disabled = false;
+    } else {
+        estadoGeneral.textContent = 'Incompleto';
+        contenedorEstado.setAttribute('data-estado', 'incompleto');
+        document.getElementById('btn-votar').disabled = true;
+    }
 }
 
 // Simular lectura de documento
@@ -200,6 +328,11 @@ function registrarVoto() {
         return;
     }
 
+    if (!verificacionBiometrica.facial || !verificacionBiometrica.huella) {
+        alert('Debe completar la verificación biométrica antes de votar.');
+        return;
+    }
+
     const candidato = document.getElementById('candidato-voto').value;
 
     if (votos[votanteActual.cedula]) {
@@ -210,7 +343,8 @@ function registrarVoto() {
     votos[votanteActual.cedula] = candidato;
     document.getElementById('form-voto').reset();
     ocultarDatosVotante();
-    alert('Voto registrado exitosamente.');
+    detenerCamara();
+    alert('Voto registrado exitosamente. Verificación biométrica completada.');
     actualizarResultados();
 }
 

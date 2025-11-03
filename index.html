@@ -48,7 +48,7 @@
         </section>
 
         <section id="votacion" class="seccion oculto">
-            <h2>Votación</h2>
+            <h2>Votación - Verificación Biométrica</h2>
             <div id="lector-documento">
                 <button id="btn-leer-documento">Leer Documento</button>
                 <p>O ingrese manualmente la cédula:</p>
@@ -57,6 +57,7 @@
                 <label for="cedula-voto">Cédula del Votante:</label>
                 <input type="text" id="cedula-voto" required>
                 <button type="button" id="btn-verificar-cedula">Verificar Cédula</button>
+
                 <div id="datos-votante" style="display: none;">
                     <h3>Datos del Votante:</h3>
                     <p id="info-nombre"></p>
@@ -65,6 +66,36 @@
                     <p id="info-localidad"></p>
                     <p id="info-barrio"></p>
                 </div>
+
+                <div id="verificacion-biometrica" style="display: none;">
+                    <h3>Verificación Biométrica</h3>
+                    <div class="biometria-container">
+                        <div class="biometria-item">
+                            <h4>Reconocimiento Facial</h4>
+                            <div id="camara-container">
+                                <video id="video-camara" autoplay muted></video>
+                                <canvas id="canvas-captura" style="display: none;"></canvas>
+                            </div>
+                            <button type="button" id="btn-capturar-foto">Capturar Foto</button>
+                            <div id="estado-facial" class="estado-verificacion">Pendiente</div>
+                        </div>
+
+                        <div class="biometria-item">
+                            <h4>Huella Dactilar</h4>
+                            <div id="lector-huella">
+                                <div class="huella-simulacion">👆</div>
+                                <p>Coloque su dedo en el lector</p>
+                            </div>
+                            <button type="button" id="btn-verificar-huella">Verificar Huella</button>
+                            <div id="estado-huella" class="estado-verificacion">Pendiente</div>
+                        </div>
+                    </div>
+
+                    <div id="estado-general" class="estado-verificacion-general">
+                        Estado de verificación: <span id="estado-verificacion">Incompleto</span>
+                    </div>
+                </div>
+
                 <label for="candidato-voto">Candidato:</label>
                 <select id="candidato-voto" required>
                     <option value="">Seleccione...</option>

@@ -78,3 +78,86 @@ button[type="submit"]:hover {
     padding: 0.5rem;
     border-bottom: 1px solid #eee;
 }
+
+/* Estilos para verificación biométrica */
+.biometria-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    justify-content: space-around;
+}
+
+.biometria-item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#camara-container {
+    margin: 1rem 0;
+}
+
+#video-camara {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #0033a0;
+    border-radius: 5px;
+}
+
+#lector-huella {
+    margin: 1rem 0;
+}
+
+.huella-simulacion {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.estado-verificacion {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.estado-verificacion[data-estado="pendiente"] {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.estado-verificacion[data-estado="procesando"] {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.estado-verificacion[data-estado="verificado"] {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.estado-verificacion[data-estado="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.estado-verificacion-general {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.estado-verificacion-general[data-estado="incompleto"] {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.estado-verificacion-general[data-estado="completo"] {
+    background-color: #d4edda;
+    color: #155724;
+}
