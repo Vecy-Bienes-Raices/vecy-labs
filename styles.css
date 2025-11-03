@@ -161,3 +161,140 @@ button[type="submit"]:hover {
     background-color: #d4edda;
     color: #155724;
 }
+
+/* Estilos para candidatos */
+#secciones-votacion {
+    margin: 2rem 0;
+}
+
+.seccion-voto {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.seccion-voto h3 {
+    margin-top: 0;
+    color: #0033a0;
+    border-bottom: 2px solid #0033a0;
+    padding-bottom: 0.5rem;
+}
+
+.candidatos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.candidato-card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.candidato-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.candidato-card.seleccionado {
+    border-color: #28a745;
+    background-color: #d4edda;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+}
+
+.candidato-card.deshabilitado {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.candidato-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.candidato-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 3px solid #ddd;
+}
+
+.candidato-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #0033a0;
+}
+
+.candidato-partido {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.candidato-biografia {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+.candidato-propuestas {
+    margin-top: 0.5rem;
+}
+
+.candidato-propuestas h5 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #0033a0;
+}
+
+.candidato-propuestas ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.candidato-propuestas li {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    color: #555;
+}
+
+.btn-seleccionar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-seleccionar:hover {
+    background-color: #0056b3;
+}
+
+.candidato-card.deshabilitado .btn-seleccionar {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.candidato-card.seleccionado .btn-seleccionar {
+    background-color: #28a745;
+}

@@ -1,0 +1,158 @@
+{
+    "presidencia": [
+        {
+            "id": "petro",
+            "nombre": "Gustavo Petro Urrego",
+            "partido": "Pacto Histórico",
+            "color": "#FF0000",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gustavo_Petro_2022.jpg/220px-Gustavo_Petro_2022.jpg",
+            "biografia": "Exalcalde de Bogotá y exsenador. Líder del Pacto Histórico. Economista y político de izquierda con amplia experiencia en el Congreso.",
+            "propuestas": [
+                "Reforma tributaria progresiva",
+                "Transición energética hacia renovables",
+                "Reforma agraria integral",
+                "Paz total con grupos armados",
+                "Sistema de salud universal"
+            ]
+        },
+        {
+            "id": "hernandez",
+            "nombre": "Rodolfo Hernández Suárez",
+            "partido": "Liga de Gobernantes Anticorrupción",
+            "color": "#FFA500",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Rodolfo_Hern%C3%A1ndez_Su%C3%A1rez_2022.jpg/220px-Rodolfo_Hern%C3%A1ndez_Su%C3%A1rez_2022.jpg",
+            "biografia": "Exalcalde de Bucaramanga. Ingeniero y empresario. Candidato independiente que llegó a segunda vuelta en 2022.",
+            "propuestas": [
+                "Lucha contra la corrupción",
+                "Reducción del gasto público",
+                "Simplificación administrativa",
+                "Apoyo al emprendimiento",
+                "Seguridad ciudadana"
+            ]
+        },
+        {
+            "id": "gutierrez",
+            "nombre": "Federico Gutiérrez Zuluaga",
+            "partido": "Equipo por Colombia",
+            "color": "#0000FF",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Federico_Guti%C3%A9rrez_Zuluaga_2022.jpg/220px-Federico_Guti%C3%A9rrez_Zuluaga_2022.jpg",
+            "biografia": "Exalcalde de Medellín. Ingeniero y político conservador. Líder de la coalición de derecha en 2022.",
+            "propuestas": [
+                "Seguridad y orden público",
+                "Generación de empleo",
+                "Infraestructura vial",
+                "Educación de calidad",
+                "Lucha contra el narcotráfico"
+            ]
+        },
+        {
+            "id": "fajardo",
+            "nombre": "Sergio Fajardo Valderrama",
+            "partido": "Centro Esperanza",
+            "color": "#008000",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Sergio_Fajardo_2022.jpg/220px-Sergio_Fajardo_2022.jpg",
+            "biografia": "Exgobernador de Antioquia y excandidato presidencial. Matemático y educador. Líder del centro político.",
+            "propuestas": [
+                "Educación gratuita y de calidad",
+                "Reforma política",
+                "Desarrollo regional equilibrado",
+                "Transparencia institucional",
+                "Innovación tecnológica"
+            ]
+        }
+    ],
+    "senado": [
+        {
+            "id": "uribe",
+            "nombre": "Álvaro Uribe Vélez",
+            "partido": "Centro Democrático",
+            "color": "#000080",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/%C3%81lvaro_Uribe_V%C3%A9lez_2022.jpg/220px-%C3%81lvaro_Uribe_V%C3%A9lez_2022.jpg",
+            "biografia": "Expresidente de Colombia (2002-2010). Líder del Centro Democrático. Senador de la República.",
+            "propuestas": [
+                "Seguridad democrática",
+                "Defensa de la institucionalidad",
+                "Apoyo al sector agropecuario",
+                "Lucha contra el comunismo",
+                "Fortalecimiento de las FF.MM."
+            ]
+        },
+        {
+            "id": "rodriguez",
+            "nombre": "Humberto de la Calle",
+            "partido": "Liberal",
+            "color": "#FF4500",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Humberto_de_la_Calle_2018.jpg/220px-Humberto_de_la_Calle_2018.jpg",
+            "biografia": "Exvicepresidente y jefe negociador de paz. Abogado y político liberal con amplia trayectoria.",
+            "propuestas": [
+                "Implementación de acuerdos de paz",
+                "Reforma política electoral",
+                "Desarrollo sostenible",
+                "Protección del medio ambiente",
+                "Diálogo nacional"
+            ]
+        },
+        {
+            "id": "cordoba",
+            "nombre": "Piedad Córdoba",
+            "partido": "Polo Democrático Alternativo",
+            "color": "#8B0000",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Piedad_C%C3%B3rdoba_2018.jpg/220px-Piedad_C%C3%B3rdoba_2018.jpg",
+            "biografia": "Exsenadora y activista por los derechos humanos. Líder de izquierda con experiencia internacional.",
+            "propuestas": [
+                "Derechos humanos",
+                "Paz y reconciliación",
+                "Reforma agraria",
+                "Protección de minorías",
+                "Cooperación internacional"
+            ]
+        }
+    ],
+    "camara": [
+        {
+            "id": "betancourt",
+            "nombre": "Ingrid Betancourt",
+            "partido": "Verde Oxígeno",
+            "color": "#32CD32",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ingrid_Betancourt_2022.jpg/220px-Ingrid_Betancourt_2022.jpg",
+            "biografia": "Exsenadora y excandidata presidencial. Superviviente de secuestro por FARC. Activista por la paz.",
+            "propuestas": [
+                "Lucha contra la corrupción",
+                "Protección del medio ambiente",
+                "Derechos de las víctimas",
+                "Transparencia gubernamental",
+                "Desarrollo sostenible"
+            ]
+        },
+        {
+            "id": "garzon",
+            "nombre": "Ángela Garzón",
+            "partido": "Unión Patriótica",
+            "color": "#DC143C",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%C3%81ngela_Garz%C3%B3n_2022.jpg/220px-%C3%81ngela_Garz%C3%B3n_2022.jpg",
+            "biografia": "Exministra de Ambiente. Bióloga y política de izquierda. Defensora del medio ambiente.",
+            "propuestas": [
+                "Protección ambiental",
+                "Transición energética",
+                "Desarrollo rural sostenible",
+                "Derechos de la naturaleza",
+                "Cambio climático"
+            ]
+        },
+        {
+            "id": "arias",
+            "nombre": "María Fernanda Cabal",
+            "partido": "Centro Democrático",
+            "color": "#000080",
+            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mar%C3%ADa_Fernanda_Cabal_2022.jpg/220px-Mar%C3%ADa_Fernanda_Cabal_2022.jpg",
+            "biografia": "Representante a la Cámara. Periodista y política conservadora. Defensora de valores tradicionales.",
+            "propuestas": [
+                "Familia y valores",
+                "Seguridad ciudadana",
+                "Defensa de la vida",
+                "Educación religiosa",
+                "Protección de la propiedad"
+            ]
+        }
+    ]
+}

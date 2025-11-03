@@ -1,6 +1,6 @@
 // Datos del sistema
 let votantes = [];
-let candidatos = [];
+let candidatos = {};
 let votos = {};
 let votanteActual = null;
 let verificacionBiometrica = {
@@ -8,6 +8,12 @@ let verificacionBiometrica = {
     huella: false
 };
 let stream = null;
+let candidatosData = {};
+let votosActuales = {
+    presidencia: null,
+    senado: null,
+    camara: null
+};
 
 // Departamentos de Colombia
 const departamentos = [
@@ -24,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     configurarNavegacion();
     configurarFormularios();
     cargarVotantesEjemplo();
+    cargarCandidatos();
 });
 
 // Inicializar select de departamentos
@@ -159,6 +166,17 @@ function cargarVotantesEjemplo() {
             actualizarListaVotantes();
         })
         .catch(error => console.error('Error cargando votantes:', error));
+}
+
+// Cargar candidatos
+function cargarCandidatos() {
+    fetch('candidatos.json')
+        .then(response => response.json())
+        .then(data => {
+            candidatosData = data;
+            renderizarCandidatos();
+        })
+        .catch(error => console.error('Error cargando candidatos:', error));
 }
 
 // Verificar cédula
@@ -297,6 +315,102 @@ function resetearVerificacionBiometrica() {
     actualizarEstadoGeneral();
 }
 
+// Renderizar candidatos
+function renderizarCandidatos() {
+    renderizarSeccion('presidencia');
+    renderizarSeccion('senado');
+    renderizarSeccion('camara');
+}
+
+// Renderizar sección específica
+function renderizarSeccion(seccion) {
+    const contenedor = document.getElementById(`candidatos-${seccion}`);
+    contenedor.innerHTML = '';
+
+    candidatosData[seccion].forEach(candidato => {
+        const card = crearTarjetaCandidato(candidato, seccion);
+        contenedor.appendChild(card);
+    });
+}
+
+// Crear tarjeta de candidato
+function crearTarjetaCandidato(candidato, seccion) {
+    const card = document.createElement('div');
+    card.className = 'candidato-card';
+    card.dataset.id = candidato.id;
+    card.dataset.seccion = seccion;
+
+    const seleccionado = votosActuales[seccion] === candidato.id;
+    if (seleccionado) {
+        card.classList.add('seleccionado');
+    }
+
+    card.innerHTML = `
+        <div class="candidato-header">
+            <img src="${candidato.foto}" alt="${candidato.nombre}" class="candidato-foto" onerror="this.src='https://via.placeholder.com/80x80?text=${candidato.nombre.charAt(0)}'">
+            <div class="candidato-info">
+                <h4>${candidato.nombre}</h4>
+                <span class="candidato-partido" style="background-color: ${candidato.color}">${candidato.partido}</span>
+            </div>
+        </div>
+        <p class="candidato-biografia">${candidato.biografia}</p>
+        <div class="candidato-propuestas">
+            <h5>Propuestas principales:</h5>
+            <ul>
+                ${candidato.propuestas.map(prop => `<li>${prop}</li>`).join('')}
+            </ul>
+        </div>
+        <button class="btn-seleccionar" onclick="seleccionarCandidato('${candidato.id}', '${seccion}')">
+            ${seleccionado ? 'Seleccionado' : 'Seleccionar'}
+        </button>
+    `;
+
+    return card;
+}
+
+// Seleccionar candidato
+function seleccionarCandidato(candidatoId, seccion) {
+    // Si ya está seleccionado, deseleccionar
+    if (votosActuales[seccion] === candidatoId) {
+        votosActuales[seccion] = null;
+    } else {
+        votosActuales[seccion] = candidatoId;
+    }
+
+    // Actualizar visualización
+    actualizarSeleccionSeccion(seccion);
+    verificarVotacionCompleta();
+}
+
+// Actualizar selección en sección
+function actualizarSeleccionSeccion(seccion) {
+    const cards = document.querySelectorAll(`#candidatos-${seccion} .candidato-card`);
+
+    cards.forEach(card => {
+        const candidatoId = card.dataset.id;
+        const seleccionado = votosActuales[seccion] === candidatoId;
+
+        card.classList.remove('seleccionado', 'deshabilitado');
+        const btn = card.querySelector('.btn-seleccionar');
+
+        if (seleccionado) {
+            card.classList.add('seleccionado');
+            btn.textContent = 'Seleccionado';
+        } else if (votosActuales[seccion] !== null) {
+            card.classList.add('deshabilitado');
+            btn.textContent = 'Seleccionar';
+        } else {
+            btn.textContent = 'Seleccionar';
+        }
+    });
+}
+
+// Verificar si la votación está completa
+function verificarVotacionCompleta() {
+    const completa = votosActuales.presidencia && votosActuales.senado && votosActuales.camara;
+    document.getElementById('btn-votar').disabled = !completa;
+}
+
 // Actualizar estado general de verificación
 function actualizarEstadoGeneral() {
     const estadoGeneral = document.getElementById('estado-verificacion');
@@ -305,7 +419,7 @@ function actualizarEstadoGeneral() {
     if (verificacionBiometrica.facial && verificacionBiometrica.huella) {
         estadoGeneral.textContent = 'Completo';
         contenedorEstado.setAttribute('data-estado', 'completo');
-        document.getElementById('btn-votar').disabled = false;
+        verificarVotacionCompleta();
     } else {
         estadoGeneral.textContent = 'Incompleto';
         contenedorEstado.setAttribute('data-estado', 'incompleto');
@@ -333,34 +447,89 @@ function registrarVoto() {
         return;
     }
 
-    const candidato = document.getElementById('candidato-voto').value;
+    if (!votosActuales.presidencia || !votosActuales.senado || !votosActuales.camara) {
+        alert('Debe seleccionar candidatos para todas las posiciones antes de votar.');
+        return;
+    }
 
     if (votos[votanteActual.cedula]) {
         alert('Este votante ya ha votado.');
         return;
     }
 
-    votos[votanteActual.cedula] = candidato;
+    // Registrar votos
+    votos[votanteActual.cedula] = {
+        presidencia: votosActuales.presidencia,
+        senado: votosActuales.senado,
+        camara: votosActuales.camara,
+        timestamp: new Date().toISOString()
+    };
+
+    // Resetear formulario
     document.getElementById('form-voto').reset();
     ocultarDatosVotante();
     detenerCamara();
+    resetearVotosActuales();
+
     alert('Voto registrado exitosamente. Verificación biométrica completada.');
     actualizarResultados();
 }
 
+// Resetear votos actuales
+function resetearVotosActuales() {
+    votosActuales = {
+        presidencia: null,
+        senado: null,
+        camara: null
+    };
+    renderizarCandidatos();
+}
+
 // Actualizar resultados
 function actualizarResultados() {
-    const resultados = {};
-    Object.values(votos).forEach(candidato => {
-        resultados[candidato] = (resultados[candidato] || 0) + 1;
+    const resultados = {
+        presidencia: {},
+        senado: {},
+        camara: {}
+    };
+
+    // Contar votos por sección
+    Object.values(votos).forEach(voto => {
+        if (voto.presidencia) resultados.presidencia[voto.presidencia] = (resultados.presidencia[voto.presidencia] || 0) + 1;
+        if (voto.senado) resultados.senado[voto.senado] = (resultados.senado[voto.senado] || 0) + 1;
+        if (voto.camara) resultados.camara[voto.camara] = (resultados.camara[voto.camara] || 0) + 1;
     });
 
     const divResultados = document.getElementById('resultados-votos');
-    divResultados.innerHTML = '<h3>Resultados:</h3>';
-    for (const [candidato, votosCount] of Object.entries(resultados)) {
-        const div = document.createElement('div');
-        div.className = 'resultado';
-        div.textContent = `${candidato}: ${votosCount} votos`;
-        divResultados.appendChild(div);
-    }
+    divResultados.innerHTML = '<h3>Resultados Electorales:</h3>';
+
+    // Mostrar resultados por sección
+    ['presidencia', 'senado', 'camara'].forEach(seccion => {
+        const tituloSeccion = seccion.charAt(0).toUpperCase() + seccion.slice(1);
+        divResultados.innerHTML += `<h4>${tituloSeccion}:</h4>`;
+
+        const votosSeccion = Object.entries(resultados[seccion])
+            .sort(([,a], [,b]) => b - a); // Ordenar por votos descendentes
+
+        if (votosSeccion.length === 0) {
+            divResultados.innerHTML += '<p>No hay votos registrados aún.</p>';
+        } else {
+            votosSeccion.forEach(([candidatoId, votosCount]) => {
+                const candidato = candidatosData[seccion].find(c => c.id === candidatoId);
+                const nombreCandidato = candidato ? candidato.nombre : candidatoId;
+                const div = document.createElement('div');
+                div.className = 'resultado';
+                div.innerHTML = `<strong>${nombreCandidato}</strong>: ${votosCount} voto${votosCount !== 1 ? 's' : ''}`;
+                divResultados.appendChild(div);
+            });
+        }
+    });
+
+    // Mostrar estadísticas generales
+    const totalVotos = Object.keys(votos).length;
+    divResultados.innerHTML += `<div class="estadisticas-generales">
+        <h4>Estadísticas Generales:</h4>
+        <p>Total de votantes: ${totalVotos}</p>
+        <p>Participación: ${((totalVotos / votantes.length) * 100).toFixed(1)}%</p>
+    </div>`;
 }

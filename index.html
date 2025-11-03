@@ -96,10 +96,23 @@
                     </div>
                 </div>
 
-                <label for="candidato-voto">Candidato:</label>
-                <select id="candidato-voto" required>
-                    <option value="">Seleccione...</option>
-                </select>
+                <div id="secciones-votacion">
+                    <div class="seccion-voto" id="seccion-presidencia">
+                        <h3>Presidente de la República</h3>
+                        <div id="candidatos-presidencia" class="candidatos-grid"></div>
+                    </div>
+
+                    <div class="seccion-voto" id="seccion-senado">
+                        <h3>Senado de la República</h3>
+                        <div id="candidatos-senado" class="candidatos-grid"></div>
+                    </div>
+
+                    <div class="seccion-voto" id="seccion-camara">
+                        <h3>Cámara de Representantes</h3>
+                        <div id="candidatos-camara" class="candidatos-grid"></div>
+                    </div>
+                </div>
+
                 <button type="submit" id="btn-votar" disabled>Votar</button>
             </form>
         </section>
