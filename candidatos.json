@@ -1,158 +1,115 @@
 {
-    "presidencia": [
-        {
-            "id": "petro",
-            "nombre": "Gustavo Petro Urrego",
-            "partido": "Pacto Histórico",
-            "color": "#FF0000",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gustavo_Petro_2022.jpg/220px-Gustavo_Petro_2022.jpg",
-            "biografia": "Exalcalde de Bogotá y exsenador. Líder del Pacto Histórico. Economista y político de izquierda con amplia experiencia en el Congreso.",
-            "propuestas": [
-                "Reforma tributaria progresiva",
-                "Transición energética hacia renovables",
-                "Reforma agraria integral",
-                "Paz total con grupos armados",
-                "Sistema de salud universal"
-            ]
-        },
-        {
-            "id": "hernandez",
-            "nombre": "Rodolfo Hernández Suárez",
-            "partido": "Liga de Gobernantes Anticorrupción",
-            "color": "#FFA500",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Rodolfo_Hern%C3%A1ndez_Su%C3%A1rez_2022.jpg/220px-Rodolfo_Hern%C3%A1ndez_Su%C3%A1rez_2022.jpg",
-            "biografia": "Exalcalde de Bucaramanga. Ingeniero y empresario. Candidato independiente que llegó a segunda vuelta en 2022.",
-            "propuestas": [
-                "Lucha contra la corrupción",
-                "Reducción del gasto público",
-                "Simplificación administrativa",
-                "Apoyo al emprendimiento",
-                "Seguridad ciudadana"
-            ]
-        },
-        {
-            "id": "gutierrez",
-            "nombre": "Federico Gutiérrez Zuluaga",
-            "partido": "Equipo por Colombia",
-            "color": "#0000FF",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Federico_Guti%C3%A9rrez_Zuluaga_2022.jpg/220px-Federico_Guti%C3%A9rrez_Zuluaga_2022.jpg",
-            "biografia": "Exalcalde de Medellín. Ingeniero y político conservador. Líder de la coalición de derecha en 2022.",
-            "propuestas": [
-                "Seguridad y orden público",
-                "Generación de empleo",
-                "Infraestructura vial",
-                "Educación de calidad",
-                "Lucha contra el narcotráfico"
-            ]
-        },
-        {
-            "id": "fajardo",
-            "nombre": "Sergio Fajardo Valderrama",
-            "partido": "Centro Esperanza",
-            "color": "#008000",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Sergio_Fajardo_2022.jpg/220px-Sergio_Fajardo_2022.jpg",
-            "biografia": "Exgobernador de Antioquia y excandidato presidencial. Matemático y educador. Líder del centro político.",
-            "propuestas": [
-                "Educación gratuita y de calidad",
-                "Reforma política",
-                "Desarrollo regional equilibrado",
-                "Transparencia institucional",
-                "Innovación tecnológica"
-            ]
-        }
+  "presidencia_vicepresidencia": [
+    {
+      "id": "pv-001",
+      "partido": "Partido Sólido (Simulado)",
+      "logo_partido": "https://url-simulada.com/logo-partido-a.png",
+      "color": "#D40000",
+      "nombre_presidente": "Precandidato Alfa",
+      "foto_presidente": "https://url-simulada.com/presidente-a.png",
+      "nombre_vicepresidente": "Fórmula Vicepresidencial Alfa",
+      "foto_vicepresidente": "https://url-simulada.com/vice-a.png",
+      "bio": "Biografía de la fórmula del Partido Sólido, enfocada en la experiencia y la estabilidad.",
+      "propuestas": ["Estabilidad económica", "Seguridad integral", "Infraestructura moderna"]
+    },
+    {
+      "id": "pv-002",
+      "partido": "Coalición El Futuro (Simulado)",
+      "logo_partido": "https://url-simulada.com/logo-partido-b.png",
+      "color": "#008000",
+      "nombre_presidente": "Precandidata Beta",
+      "foto_presidente": "https://url-simulada.com/presidente-b.png",
+      "nombre_vicepresidente": "Fórmula Vicepresidencial Beta",
+      "foto_vicepresidente": "https://url-simulada.com/vice-b.png",
+      "bio": "Biografía de la fórmula de la Coalición El Futuro, centrada en la innovación social y la sostenibilidad.",
+      "propuestas": ["Transición energética", "Educación digital universal", "Reforma a la salud"]
+    },
+    {
+      "id": "pv-003",
+      "partido": "Movimiento Cívico (Simulado)",
+      "logo_partido": "https://url-simulada.com/logo-partido-c.png",
+      "color": "#004AAD",
+      "nombre_presidente": "Precandidato Gamma",
+      "foto_presidente": "https://url-simulada.com/presidente-c.png",
+      "nombre_vicepresidente": "Fórmula Vicepresidencial Gamma",
+      "foto_vicepresidente": "https://url-simulada.com/vice-c.png",
+      "bio": "Biografía de la fórmula del Movimiento Cívico, con un discurso de lucha contra la corrupción.",
+      "propuestas": ["Transparencia total", "Justicia equitativa", "Fortalecimiento regional"]
+    },
+    {
+      "id": "pv-vb",
+      "partido": "Voto en Blanco",
+      "logo_partido": "https://url-simulada.com/voto-en-blanco.png",
+      "color": "#FFFFFF",
+      "nombre_presidente": "Voto en Blanco",
+      "foto_presidente": "https://url-simulada.com/blanco.png",
+      "nombre_vicepresidente": "",
+      "foto_vicepresidente": "",
+      "bio": "Opción constitucional para expresar disentimiento con los candidatos.",
+      "propuestas": []
+    }
+  ],
+  "senado_nacional": [
+    {
+      "id": "s-001",
+      "partido": "Partido Sólido (Simulado)",
+      "logo": "https://url-simulada.com/logo-partido-a.png",
+      "tipo_lista": "cerrada",
+      "candidatos_lista": ["Senador 1A", "Senador 2A", "Senador 3A"]
+    },
+    {
+      "id": "s-002",
+      "partido": "Coalición El Futuro (Simulado)",
+      "logo": "https://url-simulada.com/logo-partido-b.png",
+      "tipo_lista": "abierta",
+      "candidatos_lista": ["S1-Juan", "S2-María", "S3-Pedro"]
+    },
+    {
+      "id": "s-003",
+      "partido": "Movimiento Cívico (Simulado)",
+      "logo": "https://url-simulada.com/logo-partido-c.png",
+      "tipo_lista": "abierta",
+      "candidatos_lista": ["S1-Luis", "S2-Ana", "S3-Carlos"]
+    },
+    {
+      "id": "s-vb",
+      "partido": "Voto en Blanco",
+      "logo": "https://url-simulada.com/voto-en-blanco.png",
+      "tipo_lista": "blanco"
+    }
+  ],
+  "senado_indigena": [
+    {
+      "id": "si-001",
+      "partido": "Movimiento AICO (Simulado)",
+      "logo": "https://url-simulada.com/logo-aico.png",
+      "tipo_lista": "abierta",
+      "candidatos_lista": ["SI1-Taita", "SI2-Mama"]
+    },
+    {
+      "id": "si-002",
+      "partido": "Movimiento MAIS (Simulado)",
+      "logo": "https://url-simulada.com/logo-mais.png",
+      "tipo_lista": "abierta",
+      "candidatos_lista": ["SI1-Sol", "SI2-Luna"]
+    },
+    {
+      "id": "si-vb",
+      "partido": "Voto en Blanco",
+      "logo": "https://url-simulada.com/voto-en-blanco.png",
+      "tipo_lista": "blanco"
+    }
+  ],
+  "camara_territorial": {
+    "11": [
+      { "id": "c-bg-001", "partido": "Partido Sólido (Simulado)", "logo": "https://url-simulada.com/logo-partido-a.png", "tipo_lista": "abierta" },
+      { "id": "c-bg-002", "partido": "Coalición El Futuro (Simulado)", "logo": "https://url-simulada.com/logo-partido-b.png", "tipo_lista": "cerrada" },
+      { "id": "c-bg-vb", "partido": "Voto en Blanco", "logo": "https://url-simulada.com/voto-en-blanco.png", "tipo_lista": "blanco" }
     ],
-    "senado": [
-        {
-            "id": "uribe",
-            "nombre": "Álvaro Uribe Vélez",
-            "partido": "Centro Democrático",
-            "color": "#000080",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/%C3%81lvaro_Uribe_V%C3%A9lez_2022.jpg/220px-%C3%81lvaro_Uribe_V%C3%A9lez_2022.jpg",
-            "biografia": "Expresidente de Colombia (2002-2010). Líder del Centro Democrático. Senador de la República.",
-            "propuestas": [
-                "Seguridad democrática",
-                "Defensa de la institucionalidad",
-                "Apoyo al sector agropecuario",
-                "Lucha contra el comunismo",
-                "Fortalecimiento de las FF.MM."
-            ]
-        },
-        {
-            "id": "rodriguez",
-            "nombre": "Humberto de la Calle",
-            "partido": "Liberal",
-            "color": "#FF4500",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Humberto_de_la_Calle_2018.jpg/220px-Humberto_de_la_Calle_2018.jpg",
-            "biografia": "Exvicepresidente y jefe negociador de paz. Abogado y político liberal con amplia trayectoria.",
-            "propuestas": [
-                "Implementación de acuerdos de paz",
-                "Reforma política electoral",
-                "Desarrollo sostenible",
-                "Protección del medio ambiente",
-                "Diálogo nacional"
-            ]
-        },
-        {
-            "id": "cordoba",
-            "nombre": "Piedad Córdoba",
-            "partido": "Polo Democrático Alternativo",
-            "color": "#8B0000",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Piedad_C%C3%B3rdoba_2018.jpg/220px-Piedad_C%C3%B3rdoba_2018.jpg",
-            "biografia": "Exsenadora y activista por los derechos humanos. Líder de izquierda con experiencia internacional.",
-            "propuestas": [
-                "Derechos humanos",
-                "Paz y reconciliación",
-                "Reforma agraria",
-                "Protección de minorías",
-                "Cooperación internacional"
-            ]
-        }
-    ],
-    "camara": [
-        {
-            "id": "betancourt",
-            "nombre": "Ingrid Betancourt",
-            "partido": "Verde Oxígeno",
-            "color": "#32CD32",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ingrid_Betancourt_2022.jpg/220px-Ingrid_Betancourt_2022.jpg",
-            "biografia": "Exsenadora y excandidata presidencial. Superviviente de secuestro por FARC. Activista por la paz.",
-            "propuestas": [
-                "Lucha contra la corrupción",
-                "Protección del medio ambiente",
-                "Derechos de las víctimas",
-                "Transparencia gubernamental",
-                "Desarrollo sostenible"
-            ]
-        },
-        {
-            "id": "garzon",
-            "nombre": "Ángela Garzón",
-            "partido": "Unión Patriótica",
-            "color": "#DC143C",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/%C3%81ngela_Garz%C3%B3n_2022.jpg/220px-%C3%81ngela_Garz%C3%B3n_2022.jpg",
-            "biografia": "Exministra de Ambiente. Bióloga y política de izquierda. Defensora del medio ambiente.",
-            "propuestas": [
-                "Protección ambiental",
-                "Transición energética",
-                "Desarrollo rural sostenible",
-                "Derechos de la naturaleza",
-                "Cambio climático"
-            ]
-        },
-        {
-            "id": "arias",
-            "nombre": "María Fernanda Cabal",
-            "partido": "Centro Democrático",
-            "color": "#000080",
-            "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mar%C3%ADa_Fernanda_Cabal_2022.jpg/220px-Mar%C3%ADa_Fernanda_Cabal_2022.jpg",
-            "biografia": "Representante a la Cámara. Periodista y política conservadora. Defensora de valores tradicionales.",
-            "propuestas": [
-                "Familia y valores",
-                "Seguridad ciudadana",
-                "Defensa de la vida",
-                "Educación religiosa",
-                "Protección de la propiedad"
-            ]
-        }
+    "05": [
+      { "id": "c-an-001", "partido": "Partido Sólido (Simulado)", "logo": "https://url-simulada.com/logo-partido-a.png", "tipo_lista": "abierta" },
+      { "id": "c-an-002", "partido": "Movimiento Cívico (Simulado)", "logo": "https://url-simulada.com/logo-partido-c.png", "tipo_lista": "abierta" },
+      { "id": "c-an-vb", "partido": "Voto en Blanco", "logo": "https://url-simulada.com/voto-en-blanco.png", "tipo_lista": "blanco" }
     ]
+  }
 }

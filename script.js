@@ -451,7 +451,21 @@ function renderizarSeccion(seccion) {
     const contenedor = document.getElementById(`candidatos-${seccion}`);
     contenedor.innerHTML = '';
 
-    candidatosData[seccion].forEach(candidato => {
+    let candidatosSeccion = [];
+
+    if (seccion === 'presidencia') {
+        candidatosSeccion = candidatosData.presidencia_vicepresidencia;
+    } else if (seccion === 'senado') {
+        // Para simplificar, mostramos solo el Senado Nacional
+        // En un sistema real, se debería determinar si es indígena o nacional
+        candidatosSeccion = candidatosData.senado_nacional;
+    } else if (seccion === 'camara') {
+        // Para simplificar, mostramos candidatos de Bogotá (11)
+        // En un sistema real, se debería determinar por departamento del votante
+        candidatosSeccion = candidatosData.camara_territorial["11"];
+    }
+
+    candidatosSeccion.forEach(candidato => {
         const card = crearTarjetaCandidato(candidato, seccion);
         contenedor.appendChild(card);
     });
@@ -469,26 +483,65 @@ function crearTarjetaCandidato(candidato, seccion) {
         card.classList.add('seleccionado');
     }
 
-    card.innerHTML = `
-        <div class="candidato-header">
-            <img src="${candidato.foto}" alt="${candidato.nombre}" class="candidato-foto" onerror="this.src='https://via.placeholder.com/80x80?text=${candidato.nombre.charAt(0)}'">
-            <div class="candidato-info">
-                <h4>${candidato.nombre}</h4>
-                <span class="candidato-partido" style="background-color: ${candidato.color}">${candidato.partido}</span>
+    let contenidoHTML = '';
+
+    if (seccion === 'presidencia') {
+        // Tarjeta especial para fórmula presidencial
+        contenidoHTML = `
+            <div class="candidato-header">
+                <img src="${candidato.logo_partido}" alt="${candidato.partido}" class="candidato-logo-partido" onerror="this.src='https://via.placeholder.com/80x80?text=LOGO'">
+                <div class="candidato-info">
+                    <h4>${candidato.partido}</h4>
+                    <div class="formula-presidencial">
+                        <div class="presidente">
+                            <img src="${candidato.foto_presidente}" alt="${candidato.nombre_presidente}" class="candidato-foto-mini" onerror="this.src='https://via.placeholder.com/60x60?text=P'">
+                            <span><strong>${candidato.nombre_presidente}</strong> (Presidente)</span>
+                        </div>
+                        ${candidato.nombre_vicepresidente ? `
+                        <div class="vicepresidente">
+                            <img src="${candidato.foto_vicepresidente}" alt="${candidato.nombre_vicepresidente}" class="candidato-foto-mini" onerror="this.src='https://via.placeholder.com/60x60?text=V'">
+                            <span><strong>${candidato.nombre_vicepresidente}</strong> (Vicepresidente)</span>
+                        </div>
+                        ` : ''}
+                    </div>
+                </div>
             </div>
-        </div>
-        <p class="candidato-biografia">${candidato.biografia}</p>
-        <div class="candidato-propuestas">
-            <h5>Propuestas principales:</h5>
-            <ul>
-                ${candidato.propuestas.map(prop => `<li>${prop}</li>`).join('')}
-            </ul>
-        </div>
+            <p class="candidato-biografia">${candidato.bio}</p>
+            <div class="candidato-propuestas">
+                <h5>Propuestas principales:</h5>
+                <ul>
+                    ${candidato.propuestas.map(prop => `<li>${prop}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    } else {
+        // Tarjetas para Senado y Cámara (por partido/lista)
+        contenidoHTML = `
+            <div class="candidato-header">
+                <img src="${candidato.logo || candidato.logo_partido}" alt="${candidato.partido}" class="candidato-logo-partido" onerror="this.src='https://via.placeholder.com/80x80?text=LOGO'">
+                <div class="candidato-info">
+                    <h4>${candidato.partido}</h4>
+                    ${candidato.tipo_lista ? `<span class="tipo-lista">Lista ${candidato.tipo_lista}</span>` : ''}
+                </div>
+            </div>
+            ${candidato.candidatos_lista ? `
+            <div class="candidato-propuestas">
+                <h5>Candidatos en lista:</h5>
+                <ul>
+                    ${candidato.candidatos_lista.map(cand => `<li>${cand}</li>`).join('')}
+                </ul>
+            </div>
+            ` : ''}
+        `;
+    }
+
+    contenidoHTML += `
         <button class="btn-seleccionar" onclick="seleccionarCandidato('${candidato.id}', '${seccion}')">
             ${seleccionado ? 'Seleccionado' : 'Seleccionar'}
         </button>
     `;
 
+    card.innerHTML = contenidoHTML;
     return card;
 }
 
