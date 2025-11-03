@@ -28,7 +28,18 @@
                 <label for="departamento">Departamento:</label>
                 <select id="departamento" required>
                     <option value="">Seleccione...</option>
-                    <!-- Opciones de departamentos de Colombia -->
+                </select>
+                <label for="municipio">Municipio:</label>
+                <select id="municipio" required disabled>
+                    <option value="">Seleccione departamento primero...</option>
+                </select>
+                <label for="localidad">Localidad/Comuna:</label>
+                <select id="localidad" required disabled>
+                    <option value="">Seleccione municipio primero...</option>
+                </select>
+                <label for="barrio">Barrio/Vereda:</label>
+                <select id="barrio" required disabled>
+                    <option value="">Seleccione localidad primero...</option>
                 </select>
                 <button type="submit">Registrar</button>
             </form>

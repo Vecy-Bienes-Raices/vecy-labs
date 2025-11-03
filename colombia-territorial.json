@@ -1,0 +1,1157 @@
+
+{
+    "departamentos": [
+        {
+            "codigo": "05",
+            "nombre": "Antioquia",
+            "capital": "Medellín",
+            "municipios": [
+                {
+                    "codigo": "05001",
+                    "nombre": "Medellín",
+                    "tipo": "municipio",
+                    "localidades": [
+                        {
+                            "codigo": "05001001",
+                            "nombre": "La Candelaria",
+                            "tipo": "comuna",
+                            "barrios": ["Centro", "La Playa", "Buenos Aires", "Santa Elena", "Prado", "Guayaquil"]
+                        },
+                        {
+                            "codigo": "05001002",
+                            "nombre": "Villa Hermosa",
+                            "tipo": "comuna",
+                            "barrios": ["Santa María de los Ángeles", "Santa María del Rosario", "El Raizal", "La Esperanza", "El Progreso"]
+                        },
+                        {
+                            "codigo": "05001003",
+                            "nombre": "Manrique",
+                            "tipo": "comuna",
+                            "barrios": ["Santa Cruz", "El Playón", "Manrique Central", "Oriente", "María Cano-Carambolas", "San José la Cima"]
+                        },
+                        {
+                            "codigo": "05001004",
+                            "nombre": "Aranjuez",
+                            "tipo": "comuna",
+                            "barrios": ["Berlín", "San Isidro", "Palermo", "Moravia", "Sevilla", "San Benito", "Bermejal", "Aranjuez"]
+                        },
+                        {
+                            "codigo": "05001005",
+                            "nombre": "Castilla",
+                            "tipo": "comuna",
+                            "barrios": ["Toscana", "Héctor Abad Gómez", "Francisco Antonio Zea", "Campo Amor", "Las Brisas", "Florencia", "Boyacá", "Las Granjas"]
+                        },
+                        {
+                            "codigo": "05001006",
+                            "nombre": "Doce de Octubre",
+                            "tipo": "comuna",
+                            "barrios": ["Santander", "La Esperanza", "Pedregal", "Trece de Noviembre", "La América", "Kennedy", "Picacho", "Picachito"]
+                        },
+                        {
+                            "codigo": "05001007",
+                            "nombre": "Robledo",
+                            "tipo": "comuna",
+                            "barrios": ["Córdoba", "López de Mesa", "El Volador", "San Germán", "Fátima", "Bello Horizonte", "Villa Flora", "Palenque"]
+                        },
+                        {
+                            "codigo": "05001008",
+                            "nombre": "Villa Hermosa",
+                            "tipo": "comuna",
+                            "barrios": ["Batallón Girardot", "Juan XXIII La Quiebra", "Área de Expansión San Antonio de Prado", "San Antonio de Prado", "Santa María de los Ángeles"]
+                        },
+                        {
+                            "codigo": "05001009",
+                            "nombre": "Buenos Aires",
+                            "tipo": "comuna",
+                            "barrios": ["Aures", "Naranjal", "Berlín", "Cataluña", "Miranda", "Loreto", "Los Ángeles", "El Salvador"]
+                        },
+                        {
+                            "codigo": "05001010",
+                            "nombre": "Laureles-Estadio",
+                            "tipo": "comuna",
+                            "barrios": ["Carlos E. Restrepo", "Suramericana", "Nuevos Conquistadores", "La Castellana", "Lorena", "Las Acacias", "Laureles", "Florida Nueva"]
+                        },
+                        {
+                            "codigo": "05001011",
+                            "nombre": "La América",
+                            "tipo": "comuna",
+                            "barrios": ["Ferrini", "La América", "Antonio Nariño", "Campo Valdés", "Santa Lucía", "El Poblado", "Manila", "Villa Carlota"]
+                        },
+                        {
+                            "codigo": "05001012",
+                            "nombre": "San Javier",
+                            "tipo": "comuna",
+                            "barrios": ["San Javier", "El Salado", "Juan Pablo II", "Santa Rosa de Lima", "Blanquizal", "Santa Cruz", "Veinte de Julio", "La Iguaná"]
+                        },
+                        {
+                            "codigo": "05001013",
+                            "nombre": "El Poblado",
+                            "tipo": "comuna",
+                            "barrios": ["El Poblado", "Castropol", "Lalinde", "Las Lomas", "Altos del Poblado", "El Tesoro", "Santa María de los Ángeles", "Los Balsos"]
+                        },
+                        {
+                            "codigo": "05001014",
+                            "nombre": "Guayabal",
+                            "tipo": "comuna",
+                            "barrios": ["Tricentenario", "La Florida", "Belalcázar", "Santa Ana", "Bomboná", "Parque Juan Pablo II", "El Progreso", "El Triunfo"]
+                        },
+                        {
+                            "codigo": "05001015",
+                            "nombre": "Belén",
+                            "tipo": "comuna",
+                            "barrios": ["Rosales", "Granada", "San Bernardo", "Belén", "Las Mercedes", "Fátima", "Tenche", "La Palma"]
+                        },
+                        {
+                            "codigo": "05001016",
+                            "nombre": "Palmitas",
+                            "tipo": "comuna",
+                            "barrios": ["Palmitas", "San Lucas", "Altavista", "Santa Margarita", "Campo Alegre", "La Colina", "El Corazón", "La Oculta"]
+                        }
+                    ]
+                },
+                {
+                    "codigo": "05002",
+                    "nombre": "Abejorral",
+                    "tipo": "municipio",
+                    "corregimientos": ["Abejorral", "La Ceja", "La Unión", "San José de la Montaña"],
+                    "veredas": ["El Llano", "La Honda", "La Quiebra", "San Antonio", "El Hatillo"]
+                },
+                {
+                    "codigo": "05004",
+                    "nombre": "Abriaquí",
+                    "tipo": "municipio",
+                    "veredas": ["Abriaquí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05021",
+                    "nombre": "Alejandría",
+                    "tipo": "municipio",
+                    "veredas": ["Alejandría", "El Cairo", "La Playa", "San Antonio", "El Hatillo"]
+                },
+                {
+                    "codigo": "05030",
+                    "nombre": "Amagá",
+                    "tipo": "municipio",
+                    "veredas": ["Amagá", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05031",
+                    "nombre": "Amalfi",
+                    "tipo": "municipio",
+                    "veredas": ["Amalfi", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05034",
+                    "nombre": "Andes",
+                    "tipo": "municipio",
+                    "veredas": ["Andes", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05036",
+                    "nombre": "Angelópolis",
+                    "tipo": "municipio",
+                    "veredas": ["Angelópolis", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05038",
+                    "nombre": "Angostura",
+                    "tipo": "municipio",
+                    "veredas": ["Angostura", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05040",
+                    "nombre": "Anorí",
+                    "tipo": "municipio",
+                    "veredas": ["Anorí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05042",
+                    "nombre": "Santa Fé de Antioquia",
+                    "tipo": "municipio",
+                    "veredas": ["Santa Fé de Antioquia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05044",
+                    "nombre": "Anza",
+                    "tipo": "municipio",
+                    "veredas": ["Anza", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05045",
+                    "nombre": "Apartadó",
+                    "tipo": "municipio",
+                    "veredas": ["Apartadó", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05051",
+                    "nombre": "Arboletes",
+                    "tipo": "municipio",
+                    "veredas": ["Arboletes", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05055",
+                    "nombre": "Argelia",
+                    "tipo": "municipio",
+                    "veredas": ["Argelia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05059",
+                    "nombre": "Armenia",
+                    "tipo": "municipio",
+                    "veredas": ["Armenia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05079",
+                    "nombre": "Barbosa",
+                    "tipo": "municipio",
+                    "veredas": ["Barbosa", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05086",
+                    "nombre": "Belmira",
+                    "tipo": "municipio",
+                    "veredas": ["Belmira", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05088",
+                    "nombre": "Bello",
+                    "tipo": "municipio",
+                    "veredas": ["Bello", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05091",
+                    "nombre": "Betania",
+                    "tipo": "municipio",
+                    "veredas": ["Betania", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05093",
+                    "nombre": "Betulia",
+                    "tipo": "municipio",
+                    "veredas": ["Betulia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05101",
+                    "nombre": "Ciudad Bolívar",
+                    "tipo": "municipio",
+                    "veredas": ["Ciudad Bolívar", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05107",
+                    "nombre": "Briceño",
+                    "tipo": "municipio",
+                    "veredas": ["Briceño", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05113",
+                    "nombre": "Buriticá",
+                    "tipo": "municipio",
+                    "veredas": ["Buriticá", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05120",
+                    "nombre": "Cáceres",
+                    "tipo": "municipio",
+                    "veredas": ["Cáceres", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05125",
+                    "nombre": "Caicedo",
+                    "tipo": "municipio",
+                    "veredas": ["Caicedo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05129",
+                    "nombre": "Caldas",
+                    "tipo": "municipio",
+                    "veredas": ["Caldas", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05134",
+                    "nombre": "Campamento",
+                    "tipo": "municipio",
+                    "veredas": ["Campamento", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05138",
+                    "nombre": "Cañasgordas",
+                    "tipo": "municipio",
+                    "veredas": ["Cañasgordas", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05142",
+                    "nombre": "Caracolí",
+                    "tipo": "municipio",
+                    "veredas": ["Caracolí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05145",
+                    "nombre": "Caramanta",
+                    "tipo": "municipio",
+                    "veredas": ["Caramanta", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05147",
+                    "nombre": "Carepa",
+                    "tipo": "municipio",
+                    "veredas": ["Carepa", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05148",
+                    "nombre": "El Carmen de Viboral",
+                    "tipo": "municipio",
+                    "veredas": ["El Carmen de Viboral", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05150",
+                    "nombre": "Carolina",
+                    "tipo": "municipio",
+                    "veredas": ["Carolina", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05154",
+                    "nombre": "Caucasia",
+                    "tipo": "municipio",
+                    "veredas": ["Caucasia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05172",
+                    "nombre": "Chigorodó",
+                    "tipo": "municipio",
+                    "veredas": ["Chigorodó", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05190",
+                    "nombre": "Cisneros",
+                    "tipo": "municipio",
+                    "veredas": ["Cisneros", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05197",
+                    "nombre": "Cocorná",
+                    "tipo": "municipio",
+                    "veredas": ["Cocorná", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05206",
+                    "nombre": "Concepción",
+                    "tipo": "municipio",
+                    "veredas": ["Concepción", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05209",
+                    "nombre": "Concordia",
+                    "tipo": "municipio",
+                    "veredas": ["Concordia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05212",
+                    "nombre": "Copacabana",
+                    "tipo": "municipio",
+                    "veredas": ["Copacabana", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05234",
+                    "nombre": "Dabeiba",
+                    "tipo": "municipio",
+                    "veredas": ["Dabeiba", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05237",
+                    "nombre": "Donmatías",
+                    "tipo": "municipio",
+                    "veredas": ["Donmatías", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05240",
+                    "nombre": "Ebéjico",
+                    "tipo": "municipio",
+                    "veredas": ["Ebéjico", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05250",
+                    "nombre": "El Bagre",
+                    "tipo": "municipio",
+                    "veredas": ["El Bagre", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05264",
+                    "nombre": "Entrerríos",
+                    "tipo": "municipio",
+                    "veredas": ["Entrerríos", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05266",
+                    "nombre": "Envigado",
+                    "tipo": "municipio",
+                    "veredas": ["Envigado", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05282",
+                    "nombre": "Fredonia",
+                    "tipo": "municipio",
+                    "veredas": ["Fredonia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05284",
+                    "nombre": "Frontino",
+                    "tipo": "municipio",
+                    "veredas": ["Frontino", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05306",
+                    "nombre": "Giraldo",
+                    "tipo": "municipio",
+                    "veredas": ["Giraldo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05308",
+                    "nombre": "Girardota",
+                    "tipo": "municipio",
+                    "veredas": ["Girardota", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05310",
+                    "nombre": "Gómez Plata",
+                    "tipo": "municipio",
+                    "veredas": ["Gómez Plata", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05313",
+                    "nombre": "Granada",
+                    "tipo": "municipio",
+                    "veredas": ["Granada", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05315",
+                    "nombre": "Guadalupe",
+                    "tipo": "municipio",
+                    "veredas": ["Guadalupe", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05318",
+                    "nombre": "Guarne",
+                    "tipo": "municipio",
+                    "veredas": ["Guarne", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05321",
+                    "nombre": "Guatapé",
+                    "tipo": "municipio",
+                    "veredas": ["Guatapé", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05347",
+                    "nombre": "Heliconia",
+                    "tipo": "municipio",
+                    "veredas": ["Heliconia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05353",
+                    "nombre": "Hispania",
+                    "tipo": "municipio",
+                    "veredas": ["Hispania", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05360",
+                    "nombre": "Itagüí",
+                    "tipo": "municipio",
+                    "veredas": ["Itagüí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05361",
+                    "nombre": "Ituango",
+                    "tipo": "municipio",
+                    "veredas": ["Ituango", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05364",
+                    "nombre": "Jardín",
+                    "tipo": "municipio",
+                    "veredas": ["Jardín", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05368",
+                    "nombre": "Jericó",
+                    "tipo": "municipio",
+                    "veredas": ["Jericó", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05376",
+                    "nombre": "La Ceja",
+                    "tipo": "municipio",
+                    "veredas": ["La Ceja", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05380",
+                    "nombre": "La Estrella",
+                    "tipo": "municipio",
+                    "veredas": ["La Estrella", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05390",
+                    "nombre": "La Pintada",
+                    "tipo": "municipio",
+                    "veredas": ["La Pintada", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05400",
+                    "nombre": "La Unión",
+                    "tipo": "municipio",
+                    "veredas": ["La Unión", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05411",
+                    "nombre": "Liborina",
+                    "tipo": "municipio",
+                    "veredas": ["Liborina", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05425",
+                    "nombre": "Maceo",
+                    "tipo": "municipio",
+                    "veredas": ["Maceo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05440",
+                    "nombre": "Marinilla",
+                    "tipo": "municipio",
+                    "veredas": ["Marinilla", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05467",
+                    "nombre": "Montebello",
+                    "tipo": "municipio",
+                    "veredas": ["Montebello", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05475",
+                    "nombre": "Murindó",
+                    "tipo": "municipio",
+                    "veredas": ["Murindó", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05480",
+                    "nombre": "Mutatá",
+                    "tipo": "municipio",
+                    "veredas": ["Mutatá", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05483",
+                    "nombre": "Nariño",
+                    "tipo": "municipio",
+                    "veredas": ["Nariño", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05490",
+                    "nombre": "Necoclí",
+                    "tipo": "municipio",
+                    "veredas": ["Necoclí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05495",
+                    "nombre": "Nechí",
+                    "tipo": "municipio",
+                    "veredas": ["Nechí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05501",
+                    "nombre": "Olaya",
+                    "tipo": "municipio",
+                    "veredas": ["Olaya", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05541",
+                    "nombre": "Peñol",
+                    "tipo": "municipio",
+                    "veredas": ["Peñol", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05543",
+                    "nombre": "Peque",
+                    "tipo": "municipio",
+                    "veredas": ["Peque", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05576",
+                    "nombre": "Pueblorrico",
+                    "tipo": "municipio",
+                    "veredas": ["Pueblorrico", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05579",
+                    "nombre": "Puerto Berrío",
+                    "tipo": "municipio",
+                    "veredas": ["Puerto Berrío", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05585",
+                    "nombre": "Puerto Nare",
+                    "tipo": "municipio",
+                    "veredas": ["Puerto Nare", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05591",
+                    "nombre": "Puerto Triunfo",
+                    "tipo": "municipio",
+                    "veredas": ["Puerto Triunfo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05604",
+                    "nombre": "Remedios",
+                    "tipo": "municipio",
+                    "veredas": ["Remedios", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05607",
+                    "nombre": "Retiro",
+                    "tipo": "municipio",
+                    "veredas": ["Retiro", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05615",
+                    "nombre": "Rionegro",
+                    "tipo": "municipio",
+                    "veredas": ["Rionegro", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05628",
+                    "nombre": "Sabanalarga",
+                    "tipo": "municipio",
+                    "veredas": ["Sabanalarga", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05631",
+                    "nombre": "Sabaneta",
+                    "tipo": "municipio",
+                    "veredas": ["Sabaneta", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05642",
+                    "nombre": "Salgar",
+                    "tipo": "municipio",
+                    "veredas": ["Salgar", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05647",
+                    "nombre": "San Andrés de Cuerquía",
+                    "tipo": "municipio",
+                    "veredas": ["San Andrés de Cuerquía", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05649",
+                    "nombre": "San Carlos",
+                    "tipo": "municipio",
+                    "veredas": ["San Carlos", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05652",
+                    "nombre": "San Francisco",
+                    "tipo": "municipio",
+                    "veredas": ["San Francisco", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05656",
+                    "nombre": "San Jerónimo",
+                    "tipo": "municipio",
+                    "veredas": ["San Jerónimo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05658",
+                    "nombre": "San José de la Montaña",
+                    "tipo": "municipio",
+                    "veredas": ["San José de la Montaña", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05659",
+                    "nombre": "San Juan de Urabá",
+                    "tipo": "municipio",
+                    "veredas": ["San Juan de Urabá", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05660",
+                    "nombre": "San Luis",
+                    "tipo": "municipio",
+                    "veredas": ["San Luis", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05664",
+                    "nombre": "San Pedro de Urabá",
+                    "tipo": "municipio",
+                    "veredas": ["San Pedro de Urabá", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05665",
+                    "nombre": "San Pedro de los Milagros",
+                    "tipo": "municipio",
+                    "veredas": ["San Pedro de los Milagros", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05667",
+                    "nombre": "San Rafael",
+                    "tipo": "municipio",
+                    "veredas": ["San Rafael", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05670",
+                    "nombre": "San Roque",
+                    "tipo": "municipio",
+                    "veredas": ["San Roque", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05674",
+                    "nombre": "San Vicente Ferrer",
+                    "tipo": "municipio",
+                    "veredas": ["San Vicente Ferrer", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05679",
+                    "nombre": "Santa Bárbara",
+                    "tipo": "municipio",
+                    "veredas": ["Santa Bárbara", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05686",
+                    "nombre": "Santa Rosa de Osos",
+                    "tipo": "municipio",
+                    "veredas": ["Santa Rosa de Osos", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05690",
+                    "nombre": "Santo Domingo",
+                    "tipo": "municipio",
+                    "veredas": ["Santo Domingo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05697",
+                    "nombre": "El Santuario",
+                    "tipo": "municipio",
+                    "veredas": ["El Santuario", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05736",
+                    "nombre": "Segovia",
+                    "tipo": "municipio",
+                    "veredas": ["Segovia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05756",
+                    "nombre": "Sonsón",
+                    "tipo": "municipio",
+                    "veredas": ["Sonsón", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05761",
+                    "nombre": "Sopetrán",
+                    "tipo": "municipio",
+                    "veredas": ["Sopetrán", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05789",
+                    "nombre": "Támesis",
+                    "tipo": "municipio",
+                    "veredas": ["Támesis", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05790",
+                    "nombre": "Tarazá",
+                    "tipo": "municipio",
+                    "veredas": ["Tarazá", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05792",
+                    "nombre": "Tarso",
+                    "tipo": "municipio",
+                    "veredas": ["Tarso", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05809",
+                    "nombre": "Titiribí",
+                    "tipo": "municipio",
+                    "veredas": ["Titiribí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05819",
+                    "nombre": "Toledo",
+                    "tipo": "municipio",
+                    "veredas": ["Toledo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05837",
+                    "nombre": "Turbo",
+                    "tipo": "municipio",
+                    "veredas": ["Turbo", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05842",
+                    "nombre": "Uramita",
+                    "tipo": "municipio",
+                    "veredas": ["Uramita", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05847",
+                    "nombre": "Urrao",
+                    "tipo": "municipio",
+                    "veredas": ["Urrao", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05854",
+                    "nombre": "Valdivia",
+                    "tipo": "municipio",
+                    "veredas": ["Valdivia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05856",
+                    "nombre": "Valparaíso",
+                    "tipo": "municipio",
+                    "veredas": ["Valparaíso", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05858",
+                    "nombre": "Vegachí",
+                    "tipo": "municipio",
+                    "veredas": ["Vegachí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05861",
+                    "nombre": "Venecia",
+                    "tipo": "municipio",
+                    "veredas": ["Venecia", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05873",
+                    "nombre": "Vigía del Fuerte",
+                    "tipo": "municipio",
+                    "veredas": ["Vigía del Fuerte", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05885",
+                    "nombre": "Yalí",
+                    "tipo": "municipio",
+                    "veredas": ["Yalí", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05887",
+                    "nombre": "Yarumal",
+                    "tipo": "municipio",
+                    "veredas": ["Yarumal", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05890",
+                    "nombre": "Yolombó",
+                    "tipo": "municipio",
+                    "veredas": ["Yolombó", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05893",
+                    "nombre": "Yondó",
+                    "tipo": "municipio",
+                    "veredas": ["Yondó", "La Honda", "El Jordán", "La Sierra", "San José"]
+                },
+                {
+                    "codigo": "05895",
+                    "nombre": "Zaragoza",
+                    "tipo": "municipio",
+                    "veredas": ["Zaragoza", "La Honda", "El Jordán", "La Sierra", "San José"]
+                }
+            ]
+        },
+        {
+            "codigo": "08",
+            "nombre": "Atlántico",
+            "capital": "Barranquilla",
+            "municipios": [
+                {
+                    "codigo": "08001",
+                    "nombre": "Barranquilla",
+                    "tipo": "municipio",
+                    "localidades": [
+                        {
+                            "codigo": "08001001",
+                            "nombre": "Riomar",
+                            "tipo": "localidad",
+                            "barrios": ["Riomar", "El Golf", "La Cumbre", "Altos del Prado", "Villa Santos", "Prado Mar", "El Yunque"]
+                        },
+                        {
+                            "codigo": "08001002",
+                            "nombre": "Norte-Centro Histórico",
+                            "tipo": "localidad",
+                            "barrios": ["Centro", "San Roque", "Meiggs", "Chiquinquirá", "San Nicolás", "La Catedral", "Villa Colonial"]
+                        },
+                        {
+                            "codigo": "08001003",
+                            "nombre": "Sur Occidente",
+                            "tipo": "localidad",
+                            "barrios": ["La Paz", "El Bosque", "San José", "Las Nieves", "El Recreo", "Villa Country", "Ciudad Jardín"]
+                        },
+                        {
+                            "codigo": "08001004",
+                            "nombre": "Sur Oriente",
+                            "tipo": "localidad",
+                            "barrios": ["Modelo", "Alto Prado", "Los Andes", "La Sierra", "El Prado", "Bella Vista", "Country Club"]
+                        },
+                        {
+                            "codigo": "08001005",
+                            "nombre": "Occidente",
+                            "tipo": "localidad",
+                            "barrios": ["La Cumbre", "Villa Campestre", "El Country", "Los Nogales", "La Castellana", "Santa María", "El Recreo"]
+                        }
+                    ]
+                },
+                {
+                    "codigo": "08078",
+                    "nombre": "Baranoa",
+                    "tipo": "municipio",
+                    "veredas": ["Baranoa", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08079",
+                    "nombre": "Candelaria",
+                    "tipo": "municipio",
+                    "veredas": ["Candelaria", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08137",
+                    "nombre": "Galapa",
+                    "tipo": "municipio",
+                    "veredas": ["Galapa", "Paluato", "Usiacurí", "Piojó", "Baranoa"]
+                },
+                {
+                    "codigo": "08141",
+                    "nombre": "Juan de Acosta",
+                    "tipo": "municipio",
+                    "veredas": ["Juan de Acosta", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08296",
+                    "nombre": "Luruaco",
+                    "tipo": "municipio",
+                    "veredas": ["Luruaco", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08372",
+                    "nombre": "Malambo",
+                    "tipo": "municipio",
+                    "veredas": ["Malambo", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08421",
+                    "nombre": "Manatí",
+                    "tipo": "municipio",
+                    "veredas": ["Manatí", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08433",
+                    "nombre": "Palmar de Varela",
+                    "tipo": "municipio",
+                    "veredas": ["Palmar de Varela", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08436",
+                    "nombre": "Piojó",
+                    "tipo": "municipio",
+                    "veredas": ["Piojó", "Paluato", "Usiacurí", "Juan de Acosta", "Galapa"]
+                },
+                {
+                    "codigo": "08520",
+                    "nombre": "Polonuevo",
+                    "tipo": "municipio",
+                    "veredas": ["Polonuevo", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08549",
+                    "nombre": "Ponedera",
+                    "tipo": "municipio",
+                    "veredas": ["Ponedera", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08558",
+                    "nombre": "Puerto Colombia",
+                    "tipo": "municipio",
+                    "veredas": ["Puerto Colombia", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08560",
+                    "nombre": "Repelón",
+                    "tipo": "municipio",
+                    "veredas": ["Repelón", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08573",
+                    "nombre": "Sabanagrande",
+                    "tipo": "municipio",
+                    "veredas": ["Sabanagrande", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08574",
+                    "nombre": "Sabanalarga",
+                    "tipo": "municipio",
+                    "veredas": ["Sabanalarga", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08606",
+                    "nombre": "Santa Lucía",
+                    "tipo": "municipio",
+                    "veredas": ["Santa Lucía", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08634",
+                    "nombre": "Santo Tomás",
+                    "tipo": "municipio",
+                    "veredas": ["Santo Tomás", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08758",
+                    "nombre": "Soledad",
+                    "tipo": "municipio",
+                    "veredas": ["Soledad", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08770",
+                    "nombre": "Suan",
+                    "tipo": "municipio",
+                    "veredas": ["Suan", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08832",
+                    "nombre": "Tubará",
+                    "tipo": "municipio",
+                    "veredas": ["Tubará", "Paluato", "Usiacurí", "Piojó", "Galapa"]
+                },
+                {
+                    "codigo": "08849",
+                    "nombre": "Usiacurí",
+                    "tipo": "municipio",
+                    "veredas": ["Usiacurí", "Paluato", "Juan de Acosta", "Piojó", "Galapa"]
+                }
+            ]
+        },
+        {
+            "codigo": "11",
+            "nombre": "Bogotá, D.C.",
+            "tipo": "distrito_capital",
+            "localidades": [
+                {
+                    "codigo": "11001",
+                    "nombre": "Usaquén",
+                    "tipo": "localidad",
+                    "barrios": ["Verbenal", "La Uribe", "San Antonio", "La Esperanza", "Santa Bárbara", "Santa Ana", "El Codito", "El Refugio", "La Pradera", "Torca", "Santa Cecilia", "La Carolina", "El Batán", "El Chicó", "El Retiro"]
+                },
+                {
+                    "codigo": "11002",
+                    "nombre": "Chapinero",
+                    "tipo": "localidad",
+                    "barrios": ["Chapinero", "Pardo Rubio", "Chico Norte", "Chico Reservado", "El Refugio", "La Cabrera", "Marly", "Rosales", "Sucre", "Quintana"]
+                },
+                {
+                    "codigo": "11003",
+                    "nombre": "Santa Fé",
+                    "tipo": "localidad",
+                    "barrios": ["Santa Fé", "Las Aguas", "La Catedral", "Centro", "San Diego", "La Concordia", "Palermo"]
+                },
+                {
+                    "codigo": "11004",
+                    "nombre": "San Cristóbal",
+                    "tipo": "localidad",
+                    "barrios": ["San Cristóbal", "20 de Julio", "La Gloria", "Los Libertadores", "La Estanzuela", "La Favorita", "Horizontes", "El Listón"]
+                },
+                {
+                    "codigo": "11005",
+                    "nombre": "Usme",
+                    "tipo": "localidad",
+                    "barrios": ["Usme", "Alfonso López", "Danubio", "Gran Yomasa", "La Esperanza", "La Magdalena", "Nueva Autopista", "San Rafael"]
+                },
+                {
+                    "codigo": "11006",
+                    "nombre": "Tunjuelito",
+                    "tipo": "localidad",
+                    "barrios": ["Tunjuelito", "Fátima", "Venecia", "San Benito", "La Concordia", "El Carmen", "El Paraíso", "Villa Gloria"]
+                },
+                {
+                    "codigo": "11007",
+                    "nombre": "Bosa",
+                    "tipo": "localidad",
+                    "barrios": ["Bosa", "El Porvenir", "El Jordán", "La Paz", "San Bernardino", "Santa Fe", "Villa Colombia", "El Recreo"]
+                },
+                {
+                    "codigo": "11008",
+                    "nombre": "Kennedy",
+                    "tipo": "localidad",
+                    "barrios": ["Kennedy", "Timiza", "Tintal", "Calandaima", "Gran Britalia", "Santa Helenita", "Las Margaritas", "Ciudad Techo"]
+                },
+                {
+                    "codigo": "11009",
+                    "nombre": "Fontibón",
+                    "tipo": "localidad",
+                    "barrios": ["Fontibón", "Granjas de Techo", "Modelia", "Alameda", "La Esperanza", "Santa Cecilia", "Capellanía", "Zona Franca"]
+                },
+                {
+                    "codigo": "11010",
+                    "nombre": "Engativá",
+                    "tipo": "localidad",
+                    "barrios": ["Engativá", "Santa Cecilia", "Minuto de Dios", "Boyacá Real", "La Serena", "Garcés Navas", "El Dorado", "Villa Gloria"]
+                },
+                {
+                    "codigo": "11011",
+                    "nombre": "Suba",
+                    "tipo": "localidad",
+                    "barrios": ["Suba", "La Academia", "El Rincón", "Tibabuyes", "Guaymaral", "La Alhambra", "San José de Bavaria", "El Prado"]
+                },
+                {
+                    "codigo": "11012",
+                    "nombre": "Barrios Unidos",
+                    "tipo": "localidad",
+                    "barrios": ["Barrios Unidos", "Los Andes", "San Fernando", "Modelia", "Santa Sofía", "Santa Rita", "La Esperanza", "Villa Alsacia"]
+                },
+                {
+                    "codigo": "11013",
+                    "nombre": "Teusaquillo",
+                    "tipo": "localidad",
+                    "barrios": ["Teusaquillo", "La Esmeralda", "La Floresta", "Santa María", "El Carmen", "La Concordia", "San Martín", "La Paz"]
+                },
+                {
+                    "codigo": "11014",
+                    "nombre": "Los Mártires",
+                    "tipo": "localidad",
+                    "barrios": ["Los Mártires", "Santa Isabel", "San Victorino", "La Sabana", "Veracruz", "La Esperanza", "El Jordan", "Santa Fe"]
+                },
+                {
+                    "codigo": "11015",
+                    "nombre": "Antonio Nariño",
+                    "tipo": "localidad",
+                    "barrios": ["Antonio Nariño", "Restrepo", "La Paz", "La Fragua", "San Antonio", "La Favorita", "Ibagué", "Ciudad Jardín"]
+                },
+                {
+                    "codigo": "11016",
+                    "nombre": "Puente Aranda",
+                    "tipo": "localidad",
+                    "barrios": ["Puente Aranda", "Santa Sofía", "La Esperanza", "Zona Industrial", "San Rafael", "La Paz", "El Muelle", "Villa del Río"]
+                },
+                {
+                    "codigo": "11017",
+                    "nombre": "La Candelaria",
+                    "tipo": "localidad",
+                    "barrios": ["La Candelaria", "Centro", "La Concordia", "Santa Inés", "San Diego", "Las Aguas", "La Catedral", "San Victorino"]
+                },
+                {
+                    "codigo": "11018",
+                    "nombre": "Rafael Uribe Uribe",
+                    "tipo": "localidad",
+                    "barrios": ["Rafael Uribe Uribe", "Diana Turbay", "San José", "Quiroga", "La Esperanza", "Marco Fidel Suárez", "Santa Lucía", "El Vergel"]
+                },
+                {
+                    "codigo": "11019",
+                    "nombre": "Ciudad Bolívar",
+                    "tipo": "localidad",
+                    "barrios": ["Ciudad Bolívar", "Monteblanco", "El Mochuelo", "El Tesoro", "San Francisco", "Lucero Alto", "El Paraíso", "Villa del Río"]
+                },
+                {
+                    "codigo": "11020",
+                    "nombre": "Sumapaz",
+                    "tipo": "localidad",
+                    "veredas": ["Sumapaz", "El Uvito", "La Unión", "El Tobal", "La Cristalina", "El Hato", "La Pampa", "El Triunfo"]
+                }
+            ]
+        }
+    ]
+}

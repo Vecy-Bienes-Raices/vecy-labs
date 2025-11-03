@@ -31,16 +31,116 @@ document.addEventListener('DOMContentLoaded', function() {
     configurarFormularios();
     cargarVotantesEjemplo();
     cargarCandidatos();
+    cargarDatosTerritoriales();
 });
 
 // Inicializar select de departamentos
 function inicializarDepartamentos() {
     const select = document.getElementById('departamento');
-    departamentos.forEach(dept => {
+    select.innerHTML = '<option value="">Seleccione...</option>';
+    datosTerritoriales.departamentos?.forEach(dept => {
         const option = document.createElement('option');
-        option.value = dept;
-        option.textContent = dept;
+        option.value = dept.nombre;
+        option.textContent = dept.nombre;
         select.appendChild(option);
+    });
+}
+
+// Inicializar selectores territoriales
+function inicializarSelectoresTerritoriales() {
+    const selectDepartamento = document.getElementById('departamento');
+    const selectMunicipio = document.getElementById('municipio');
+    const selectLocalidad = document.getElementById('localidad');
+    const selectBarrio = document.getElementById('barrio');
+
+    // Event listener para departamento
+    selectDepartamento.addEventListener('change', function() {
+        const departamentoSeleccionado = datosTerritoriales.departamentos?.find(d => d.nombre === this.value);
+        actualizarMunicipios(departamentoSeleccionado);
+        limpiarSelectoresInferiores();
+    });
+
+    // Event listener para municipio
+    selectMunicipio.addEventListener('change', function() {
+        const departamentoSeleccionado = datosTerritoriales.departamentos?.find(d => d.nombre === selectDepartamento.value);
+        const municipioSeleccionado = departamentoSeleccionado?.municipios?.find(m => m.nombre === this.value);
+        actualizarLocalidades(municipioSeleccionado);
+        limpiarSelectoresInferiores('localidad');
+    });
+
+    // Event listener para localidad
+    selectLocalidad.addEventListener('change', function() {
+        const departamentoSeleccionado = datosTerritoriales.departamentos?.find(d => d.nombre === selectDepartamento.value);
+        const municipioSeleccionado = departamentoSeleccionado?.municipios?.find(m => m.nombre === selectMunicipio.value);
+        const localidadSeleccionada = municipioSeleccionado?.localidades?.find(l => l.nombre === this.value);
+        actualizarBarrios(localidadSeleccionada);
+    });
+}
+
+// Actualizar municipios
+function actualizarMunicipios(departamento) {
+    const selectMunicipio = document.getElementById('municipio');
+    selectMunicipio.innerHTML = '<option value="">Seleccione...</option>';
+
+    if (departamento?.municipios) {
+        departamento.municipios.forEach(municipio => {
+            const option = document.createElement('option');
+            option.value = municipio.nombre;
+            option.textContent = municipio.nombre;
+            selectMunicipio.appendChild(option);
+        });
+    }
+}
+
+// Actualizar localidades
+function actualizarLocalidades(municipio) {
+    const selectLocalidad = document.getElementById('localidad');
+    selectLocalidad.innerHTML = '<option value="">Seleccione...</option>';
+
+    if (municipio?.localidades) {
+        municipio.localidades.forEach(localidad => {
+            const option = document.createElement('option');
+            option.value = localidad.nombre;
+            option.textContent = localidad.nombre;
+            selectLocalidad.appendChild(option);
+        });
+    }
+}
+
+// Actualizar barrios/veredas
+function actualizarBarrios(localidad) {
+    const selectBarrio = document.getElementById('barrio');
+    selectBarrio.innerHTML = '<option value="">Seleccione...</option>';
+
+    if (localidad?.barrios) {
+        localidad.barrios.forEach(barrio => {
+            const option = document.createElement('option');
+            option.value = barrio;
+            option.textContent = barrio;
+            selectBarrio.appendChild(option);
+        });
+    } else if (localidad?.veredas) {
+        localidad.veredas.forEach(vereda => {
+            const option = document.createElement('option');
+            option.value = vereda;
+            option.textContent = vereda;
+            selectBarrio.appendChild(option);
+        });
+    }
+}
+
+// Limpiar selectores inferiores
+function limpiarSelectoresInferiores(nivel = 'municipio') {
+    const selectores = ['municipio', 'localidad', 'barrio'];
+
+    selectores.forEach(selector => {
+        if (nivel === 'municipio' && selector === 'municipio') return;
+        if (nivel === 'localidad' && ['municipio', 'localidad'].includes(selector)) return;
+
+        const select = document.getElementById(selector);
+        if (select) {
+            select.innerHTML = '<option value="">Seleccione...</option>';
+        }
     });
 }
 
@@ -97,15 +197,27 @@ function registrarVotante() {
     const cedula = document.getElementById('cedula').value;
     const nombre = document.getElementById('nombre').value;
     const departamento = document.getElementById('departamento').value;
+    const municipio = document.getElementById('municipio').value;
+    const localidad = document.getElementById('localidad').value;
+    const barrio = document.getElementById('barrio').value;
 
     if (votantes.some(v => v.cedula === cedula)) {
         alert('Esta cédula ya está registrada.');
         return;
     }
 
-    votantes.push({ cedula, nombre, departamento });
+    votantes.push({
+        cedula,
+        nombre,
+        departamento,
+        municipio,
+        localidad,
+        barrio
+    });
+
     actualizarListaVotantes();
     document.getElementById('form-registro').reset();
+    limpiarSelectoresInferiores();
     alert('Votante registrado exitosamente.');
 }
 
@@ -166,6 +278,18 @@ function cargarVotantesEjemplo() {
             actualizarListaVotantes();
         })
         .catch(error => console.error('Error cargando votantes:', error));
+}
+
+// Cargar datos territoriales
+let datosTerritoriales = {};
+function cargarDatosTerritoriales() {
+    fetch('colombia-territorial.json')
+        .then(response => response.json())
+        .then(data => {
+            datosTerritoriales = data;
+            inicializarSelectoresTerritoriales();
+        })
+        .catch(error => console.error('Error cargando datos territoriales:', error));
 }
 
 // Cargar candidatos
