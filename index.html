@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Electoral Colombia - Prototipo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema Electoral de Colombia</h1>
+        <nav>
+            <button id="btn-registro">Registro de Votantes</button>
+            <button id="btn-candidatos">Gestión de Candidatos</button>
+            <button id="btn-votacion">Votación</button>
+            <button id="btn-resultados">Resultados</button>
+        </nav>
+    </header>
+
+    <main id="contenido-principal">
+        <section id="registro-votantes" class="seccion oculto">
+            <h2>Registro de Votantes</h2>
+            <form id="form-registro">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" required>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" required>
+                    <option value="">Seleccione...</option>
+                    <!-- Opciones de departamentos de Colombia -->
+                </select>
+                <button type="submit">Registrar</button>
+            </form>
+            <div id="lista-votantes"></div>
+        </section>
+
+        <section id="gestion-candidatos" class="seccion oculto">
+            <h2>Gestión de Candidatos</h2>
+            <form id="form-candidato">
+                <label for="nombre-candidato">Nombre:</label>
+                <input type="text" id="nombre-candidato" required>
+                <label for="partido">Partido:</label>
+                <input type="text" id="partido" required>
+                <button type="submit">Agregar Candidato</button>
+            </form>
+            <div id="lista-candidatos"></div>
+        </section>
+
+        <section id="votacion" class="seccion oculto">
+            <h2>Votación</h2>
+            <div id="lector-documento">
+                <button id="btn-leer-documento">Leer Documento</button>
+                <p>O ingrese manualmente la cédula:</p>
+            </div>
+            <form id="form-voto">
+                <label for="cedula-voto">Cédula del Votante:</label>
+                <input type="text" id="cedula-voto" required>
+                <button type="button" id="btn-verificar-cedula">Verificar Cédula</button>
+                <div id="datos-votante" style="display: none;">
+                    <h3>Datos del Votante:</h3>
+                    <p id="info-nombre"></p>
+                    <p id="info-departamento"></p>
+                    <p id="info-municipio"></p>
+                    <p id="info-localidad"></p>
+                    <p id="info-barrio"></p>
+                </div>
+                <label for="candidato-voto">Candidato:</label>
+                <select id="candidato-voto" required>
+                    <option value="">Seleccione...</option>
+                </select>
+                <button type="submit" id="btn-votar" disabled>Votar</button>
+            </form>
+        </section>
+
+        <section id="resultados" class="seccion oculto">
+            <h2>Resultados Electorales</h2>
+            <div id="resultados-votos"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "cedula": "1234567890",
+        "nombre": "Juan Pérez López",
+        "departamento": "Cundinamarca",
+        "municipio": "Bogotá",
+        "localidad": "Chapinero",
+        "barrio": "Centro"
+    },
+    {
+        "cedula": "0987654321",
+        "nombre": "María González Rodríguez",
+        "departamento": "Antioquia",
+        "municipio": "Medellín",
+        "localidad": "La Candelaria",
+        "barrio": "El Centro"
+    },
+    {
+        "cedula": "1122334455",
+        "nombre": "Carlos Ramírez Sánchez",
+        "departamento": "Valle del Cauca",
+        "municipio": "Cali",
+        "localidad": "San Fernando",
+        "barrio": "Alfonso López"
+    },
+    {
+        "cedula": "5566778899",
+        "nombre": "Ana Martínez Torres",
+        "departamento": "Atlántico",
+        "municipio": "Barranquilla",
+        "localidad": "Riomar",
+        "barrio": "El Prado"
+    },
+    {
+        "cedula": "4433221100",
+        "nombre": "Luis Herrera Morales",
+        "departamento": "Santander",
+        "municipio": "Bucaramanga",
+        "localidad": "Centro",
+        "barrio": "Cabecera del Llano"
+    }
+]
