@@ -1,3 +1,6 @@
+/* === SISTEMA DE DISEÑO PROFESIONAL - VERSIÓN UNIFICADA CORREGIDA === */
+
+/* --- 1. Variables Globales y Reseteo --- */
 :root {
   --primary-blue: #007aff;
   --dark-blue: #00296b;
@@ -12,11 +15,14 @@
   --spacing-xl: 32px;
   --border-radius: 20px;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* --- 2. Estilos Generales del Body y Animaciones --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
@@ -30,6 +36,7 @@ body {
   animation: gradient-animation 18s ease infinite;
   color: var(--text-dark);
 }
+
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -41,11 +48,32 @@ body {
     background-position: 0% 50%;
   }
 }
+
+@keyframes brillo-espada {
+  0% {
+    transform: translateX(-150%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-30deg);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .oculto {
   display: none !important;
 }
 
-/* Welcome Screen */
+/* --- 3. Pantalla de Bienvenida --- */
 #welcome-screen {
   display: flex;
   justify-content: center;
@@ -53,11 +81,13 @@ body {
   min-height: 100vh;
   padding: var(--spacing-md);
 }
+
 #welcome-card {
   max-width: 500px;
   width: 100%;
   text-align: center;
 }
+
 .logo-principal {
   width: 120px;
   margin-bottom: var(--spacing-md);
@@ -65,35 +95,14 @@ body {
     drop-shadow(0 0 20px rgba(0, 56, 168, 0.5))
     drop-shadow(0 0 30px rgba(206, 17, 38, 0.4));
 }
-#welcome-card button {
-  background: #009eff; /* Azul más vibrante y saturado */
-  transform: scale(1.05);
-  /* Brillo cian, más enfocado y eléctrico */
-  box-shadow: 0 0 25px rgba(0, 200, 255, 0.8);
-}
 
-#welcome-card button:hover {
-  background: #409cff; /* Azul más brillante */
-  transform: scale(1.05);
-  /* Efecto de brillo luminoso azul */
-  box-shadow: 0 0 25px rgba(0, 122, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
-}
-
-/* Main App Layout */
-.glass-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: var(--border-radius);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-  padding: var(--spacing-lg);
-}
+/* --- 4. Layout Principal de la App --- */
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: var(--spacing-lg);
 }
+
 header {
   display: flex;
   align-items: center;
@@ -106,57 +115,33 @@ header {
   top: 0;
   z-index: 100;
 }
+
 .header-title-container {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
 }
+
 .logo-header {
   width: 50px;
   filter: drop-shadow(0 0 10px rgba(252, 209, 22, 0.7));
 }
+
 header h1 {
   color: var(--text-light);
   font-size: 1.5rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
+
 nav {
   display: flex;
   gap: var(--spacing-sm);
 }
-button {
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.6);
-  color: var(--text-dark);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-button:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-}
-button:disabled {
-  background: rgba(200, 200, 200, 0.5);
-  color: #888;
-  cursor: not-allowed;
-}
-input,
-select {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-.form-group {
-  margin-bottom: var(--spacing-md);
-}
+
 .seccion {
   margin-bottom: var(--spacing-xl);
 }
+
 .seccion h2 {
   color: var(--text-dark);
   font-size: 1.8rem;
@@ -166,35 +151,239 @@ select {
   text-align: center;
 }
 
-/* Votacion Section */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-lg);
+}
+
+/* --- 5. SISTEMA DE BOTONES UNIFICADO Y CORREGIDO --- */
+
+/* ESTILO BASE COMÚN PARA TODOS LOS BOTONES */
+button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ESTADO DESHABILITADO (máxima prioridad) */
+button:disabled {
+  background: rgba(200, 200, 200, 0.5) !important;
+  color: #888 !important;
+  cursor: not-allowed !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+button:disabled::before {
+  display: none !important;
+}
+
+/* === TIPO 1: BOTONES DE VIDRIO (Navegación y Anteriores/Siguientes) === */
+nav button,
+#btn-anterior,
+#btn-siguiente {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text-dark);
+}
+
+nav button:not(:disabled):hover,
+#btn-anterior:not(:disabled):hover,
+#btn-siguiente:not(:disabled):hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* === TIPO 2: BOTONES CON EFECTO ESPADA (Azules, Verdes y Seleccionar) === */
+
+/* Pseudo-elemento para el efecto de brillo */
+#welcome-card button::before,
+.btn-seleccionar::before,
+#btn-votar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-150%) skewX(-30deg);
+  transition: none;
+  pointer-events: none;
+}
+
+/* Activar animación en hover */
+#welcome-card button:not(:disabled):hover::before,
+.btn-seleccionar:not(:disabled):hover::before,
+#btn-votar:not(:disabled):hover::before {
+  animation: brillo-espada 1s ease-in-out;
+}
+
+/* BOTONES AZULES (Bienvenida y Seleccionar Candidato) */
+#welcome-card button,
+.btn-seleccionar {
+  background: var(--primary-blue);
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#welcome-card button:not(:disabled):hover,
+.btn-seleccionar:not(:disabled):hover {
+  background: var(--primary-blue);
+}
+
+/* BOTÓN VERDE (Registrar Voto) */
+#btn-votar {
+  background: #28a745;
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#btn-votar:not(:disabled):hover {
+  background: #33c159;
+}
+
+/* Estilos específicos de tamaño y posición */
+#welcome-card button {
+  margin: var(--spacing-sm) 0;
+  width: 80%;
+}
+
+.btn-seleccionar {
+  width: 100%;
+  margin-top: auto;
+}
+
+#btn-votar {
+  grid-column: 2;
+  justify-self: center;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+}
+
+/* --- 6. Formularios --- */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+/* === BOTONES ESPECIALES DE ACCIÓN (Escaneo, Verificación, Inicio) === */
+/* Selectores para botones de verificación en la sección de identidad */
+.verification-column button,
+#datos-votante ~ button,
+.biometria-item button {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.5)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de onda luminosa */
+.verification-column button::after,
+#datos-votante ~ button::after,
+.biometria-item button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease-out, height 0.6s ease-out, opacity 0.6s ease-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.verification-column button:not(:disabled):hover,
+#datos-votante ~ button:not(:disabled):hover,
+.biometria-item button:not(:disabled):hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.85)
+  );
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(0, 122, 255, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.verification-column button:not(:disabled):hover::after,
+#datos-votante ~ button:not(:disabled):hover::after,
+.biometria-item button:not(:disabled):hover::after {
+  width: 250px;
+  height: 250px;
+  opacity: 0.6;
+}
+
+/* --- 7. Sección de Votación y Tarjetón --- */
 .verification-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
 }
+
 .verification-column {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
 }
+
 #datos-votante {
   background: rgba(0, 0, 0, 0.05);
   padding: var(--spacing-md);
   border-radius: 12px;
 }
+
 .biometria-item {
   background: rgba(0, 0, 0, 0.05);
   padding: var(--spacing-md);
   border-radius: 12px;
   text-align: center;
 }
+
 #video-camara {
   width: 100%;
   border-radius: 8px;
   margin-top: var(--spacing-md);
 }
 
-/* Tarjetón Modal */
 #tarjeton-modal {
   position: fixed;
   top: 0;
@@ -209,6 +398,7 @@ select {
   align-items: center;
   padding: var(--spacing-lg);
 }
+
 .tarjeton-content {
   width: 100%;
   max-width: 1600px;
@@ -217,6 +407,7 @@ select {
   display: flex;
   flex-direction: column;
 }
+
 #tarjeton-titulo-etapa {
   text-align: center;
   margin-bottom: var(--spacing-lg);
@@ -224,11 +415,13 @@ select {
   font-size: 1.8rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 #etapas-container {
   flex-grow: 1;
   overflow-y: auto;
   padding: var(--spacing-sm);
 }
+
 #tarjeton-navegacion {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -238,35 +431,26 @@ select {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   overflow: hidden;
 }
+
 #btn-anterior {
   grid-column: 1;
   justify-self: start;
   margin-left: 20px;
 }
-#btn-votar {
-  grid-column: 2;
-  justify-self: center;
-  background: #28a745;
-  color: white;
-  padding: 15px 40px;
-  font-size: 1.2rem;
-}
-#btn-votar:hover {
-  background: #33c159;
-  box-shadow: 0 0 25px rgba(40, 167, 69, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
-}
+
 #btn-siguiente {
   grid-column: 3;
   justify-self: end;
   margin-right: 20px;
 }
 
-/* Candidate Cards */
+/* --- 8. Tarjetas de Candidatos --- */
 .candidatos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
 }
+
 .candidato-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
@@ -278,18 +462,22 @@ select {
   position: relative;
   padding-top: var(--spacing-xl);
 }
+
 .candidato-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
 .candidato-card.seleccionado {
   border-color: #28a745;
   box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
 }
+
 .candidato-card.deshabilitado {
   opacity: 0.6;
   filter: grayscale(80%);
 }
+
 .candidato-numero {
   position: absolute;
   top: -1px;
@@ -303,16 +491,19 @@ select {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .candidato-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-md);
 }
+
 .candidato-fotos {
   display: flex;
   gap: var(--spacing-sm);
 }
+
 .candidato-foto {
   height: 60px;
   width: 60px;
@@ -321,78 +512,61 @@ select {
   border: 2px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .candidato-foto.vicepresidente {
   margin-left: -20px;
 }
+
 .candidato-logo {
   height: 40px;
   width: auto;
   max-width: 80px;
   object-fit: contain;
 }
+
 .candidato-logo.unico {
   height: 50px;
   margin: 0 auto;
 }
+
 .candidato-body {
   flex-grow: 1;
 }
+
 .candidato-card h4,
 .candidato-card h5,
 .candidato-card p,
 .candidato-card li {
   color: var(--text-dark);
 }
+
 .candidato-nombre {
   font-size: 0.9em;
   margin: 2px 0;
 }
+
 .lista-info {
   margin-top: var(--spacing-md);
   font-weight: bold;
 }
+
 .checkmark-icon {
   font-size: 2.5rem;
   text-align: center;
   color: #28a745;
   animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-@keyframes pop-in {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
+/* --- 9. Diseño Responsivo (Media Queries) --- */
 @media (max-width: 900px) {
   .verification-container {
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     gap: var(--spacing-md);
   }
-}
-
-/* --- ESTILOS PARA EL BOTÓN DE SELECCIÓN EN TARJETAS --- */
-
-.btn-seleccionar {
-  background: var(--primary-blue);
-  color: var(--text-light); /* Texto blanco */
-  width: 100%;
-  margin-top: auto;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.btn-seleccionar:hover {
-  background: #009eff; /* Mismo azul vibrante */
-  transform: scale(1.05);
-  /* Mismo brillo eléctrico */
-  box-shadow: 0 0 25px rgba(0, 200, 255, 0.8);
 }

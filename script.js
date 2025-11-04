@@ -224,7 +224,9 @@ function crearTarjetaCandidato(c, seccion, numero) {
         ${numeroHTML}
         <div class="candidato-header">${visualHTML}</div>
         <div class="candidato-body">${infoHTML}${propuestasHTML}</div>
-        <div class="button-container"><button class="btn-seleccionar">Seleccionar</button></div>
+        <div class="button-container">
+            <button class="btn-seleccionar">Seleccionar</button>
+        </div>
     `;
     
     card.addEventListener('click', () => seleccionarCandidato(c.id, seccion));
