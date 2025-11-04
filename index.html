@@ -3,137 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Electoral Colombia - Prototipo</title>
+    <title>Sistema Electoral de Colombia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Sistema Electoral de Colombia</h1>
-        <nav>
-            <button id="btn-registro">Registro de Votantes</button>
-            <button id="btn-candidatos">Gestión de Candidatos</button>
-            <button id="btn-votacion">Votación</button>
-            <button id="btn-resultados">Resultados</button>
-        </nav>
-    </header>
+    <div id="welcome-screen">
+        <div id="welcome-card" class="glass-card">
+            <img src="https://static.wixstatic.com/media/334454_2644ca748a7441ec8a0133879f24ab7a~mv2.png" alt="Escudo de Colombia" class="logo-principal">
+            <h1>Bienvenido al Sistema Electoral de Colombia</h1>
+            <p>Por favor, seleccione su rol para continuar</p>
+            <button id="btn-iniciar-votante">Ingresar como Votante</button>
+            <button id="btn-iniciar-operador">Ingresar como Operador Electoral</button>
+        </div>
+    </div>
 
-    <main id="contenido-principal">
-        <section id="registro-votantes" class="seccion oculto">
-            <h2>Registro de Votantes</h2>
-            <form id="form-registro">
-                <label for="cedula">Cédula:</label>
-                <input type="text" id="cedula" required>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-                <label for="departamento">Departamento:</label>
-                <select id="departamento" required>
-                    <option value="">Seleccione...</option>
-                </select>
-                <label for="municipio">Municipio:</label>
-                <select id="municipio" required disabled>
-                    <option value="">Seleccione departamento primero...</option>
-                </select>
-                <label for="localidad">Localidad/Comuna:</label>
-                <select id="localidad" required disabled>
-                    <option value="">Seleccione municipio primero...</option>
-                </select>
-                <label for="barrio">Barrio/Vereda:</label>
-                <select id="barrio" required disabled>
-                    <option value="">Seleccione localidad primero...</option>
-                </select>
-                <button type="submit">Registrar</button>
-            </form>
-            <div id="lista-votantes"></div>
-        </section>
-
-        <section id="gestion-candidatos" class="seccion oculto">
-            <h2>Gestión de Candidatos</h2>
-            <form id="form-candidato">
-                <label for="nombre-candidato">Nombre:</label>
-                <input type="text" id="nombre-candidato" required>
-                <label for="partido">Partido:</label>
-                <input type="text" id="partido" required>
-                <button type="submit">Agregar Candidato</button>
-            </form>
-            <div id="lista-candidatos"></div>
-        </section>
-
-        <section id="votacion" class="seccion oculto">
-            <h2>Votación - Verificación Biométrica</h2>
-            <div id="lector-documento">
-                <button id="btn-leer-documento">Leer Documento</button>
-                <p>O ingrese manualmente la cédula:</p>
+    <div id="app-container" class="oculto">
+        <header>
+            <div class="header-title-container">
+                <img src="https://static.wixstatic.com/media/334454_2644ca748a7441ec8a0133879f24ab7a~mv2.png" alt="Escudo de Colombia" class="logo-header">
+                <h1>Sistema Electoral de Colombia</h1>
             </div>
-            <form id="form-voto">
-                <label for="cedula-voto">Cédula del Votante:</label>
-                <input type="text" id="cedula-voto" required>
-                <button type="button" id="btn-verificar-cedula">Verificar Cédula</button>
+            <nav>
+                <button id="btn-registro">Registro</button>
+                <button id="btn-votacion">Votación</button>
+                <button id="btn-resultados">Resultados</button>
+            </nav>
+        </header>
 
-                <div id="datos-votante" style="display: none;">
-                    <h3>Datos del Votante:</h3>
-                    <p id="info-nombre"></p>
-                    <p id="info-departamento"></p>
-                    <p id="info-municipio"></p>
-                    <p id="info-localidad"></p>
-                    <p id="info-barrio"></p>
-                </div>
-
-                <div id="verificacion-biometrica" style="display: none;">
-                    <h3>Verificación Biométrica</h3>
-                    <div class="biometria-container">
-                        <div class="biometria-item">
-                            <h4>Reconocimiento Facial</h4>
-                            <div id="camara-container">
-                                <video id="video-camara" autoplay muted></video>
-                                <canvas id="canvas-captura" style="display: none;"></canvas>
-                            </div>
-                            <button type="button" id="btn-capturar-foto">Capturar Foto</button>
-                            <div id="estado-facial" class="estado-verificacion">Pendiente</div>
-                        </div>
-
-                        <div class="biometria-item">
-                            <h4>Huella Dactilar</h4>
-                            <div id="lector-huella">
-                                <div class="huella-simulacion">👆</div>
-                                <p>Coloque su dedo en el lector</p>
-                            </div>
-                            <button type="button" id="btn-verificar-huella">Verificar Huella</button>
-                            <div id="estado-huella" class="estado-verificacion">Pendiente</div>
+        <main class="container">
+             <section id="registro-votantes" class="seccion glass-card oculto">
+                <h2>Registro de Votantes (Simulado)</h2>
+            </section>
+            
+            <section id="votacion" class="seccion glass-card">
+                <h2>Verificación de Identidad</h2>
+                <div class="verification-container">
+                    <div class="verification-column">
+                        <div id="lector-documento"><button id="btn-leer-documento">Simular Escaneo</button><p>o ingrese la cédula:</p></div>
+                        <div class="form-group"><label for="cedula-voto">Cédula del Votante:</label><input type="text" id="cedula-voto" required></div>
+                        <button type="button" id="btn-verificar-cedula">Verificar Cédula</button>
+                        <div id="datos-votante" class="oculto">
+                            <h3>Datos del Votante:</h3>
+                            <p id="info-nombre"></p><p id="info-departamento"></p><p id="info-municipio"></p><p id="info-puesto"></p><p id="info-direccion"></p><p id="info-mesa"></p>
                         </div>
                     </div>
-
-                    <div id="estado-general" class="estado-verificacion-general">
-                        Estado de verificación: <span id="estado-verificacion">Incompleto</span>
+                    <div class="verification-column">
+                        <div id="verificacion-biometrica" class="oculto">
+                            <h3>Verificación Biométrica</h3>
+                            <div class="biometria-item"><p>Verificación Facial</p><div id="estado-facial">Pendiente</div><button type="button" id="btn-capturar-foto">Iniciar</button></div>
+                            <div class="biometria-item"><p>Verificación de Huella</p><div id="estado-huella">Pendiente</div><button type="button" id="btn-verificar-huella">Iniciar</button></div>
+                            <video id="video-camara" class="oculto" autoplay muted></video>
+                        </div>
                     </div>
                 </div>
+            </section>
+            
+            <section id="resultados" class="seccion glass-card oculto">
+                <h2>Resultados Electorales (Simulado)</h2>
+            </section>
+        </main>
+    </div>
 
-                <div id="secciones-votacion">
-                    <div class="seccion-voto" id="seccion-presidencia">
-                        <h3>Presidente de la República</h3>
-                        <div id="candidatos-presidencia" class="candidatos-grid"></div>
-                    </div>
-
-                    <div class="seccion-voto" id="seccion-senado">
-                        <h3>Senado de la República</h3>
-                        <div id="candidatos-senado" class="candidatos-grid"></div>
-                    </div>
-
-                    <div class="seccion-voto" id="seccion-camara">
-                        <h3>Cámara de Representantes</h3>
-                        <div id="candidatos-camara" class="candidatos-grid"></div>
-                    </div>
-                </div>
-
-                <button type="submit" id="btn-votar" disabled>Votar</button>
-            </form>
-        </section>
-
-        <section id="resultados" class="seccion oculto">
-            <h2>Resultados Electorales</h2>
-            <div id="resultados-votos"></div>
-        </section>
-    </main>
-
+    <div id="tarjeton-modal" class="oculto">
+        <div class="tarjeton-content">
+            <h2 id="tarjeton-titulo-etapa"></h2>
+            <div id="etapas-container">
+                <div class="seccion-voto" data-etapa="0"><div id="candidatos-presidencia" class="candidatos-grid"></div></div>
+                <div class="seccion-voto oculto" data-etapa="1"><div id="candidatos-senado" class="candidatos-grid"></div></div>
+                <div class="seccion-voto oculto" data-etapa="2"><div id="candidatos-camara" class="candidatos-grid"></div></div>
+            </div>
+            <div id="tarjeton-navegacion">
+                <button id="btn-anterior">Anterior</button>
+                <button id="btn-votar" class="oculto" onclick="registrarVoto()">REGISTRAR VOTO</button>
+                <button id="btn-siguiente">Siguiente</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
