@@ -1,94 +1,94 @@
 [
-    {
-        "cedula": "3267447",
-        "nombre": "CARLOS ARTURO",
-        "apellidos": "RIVERA GOMEZ",
-        "status": "Activo",
-        "puesto_votacion": {
-            "departamento": "CUNDINAMARCA",
-            "municipio": "ZIPAQUIRA",
-            "puesto": "COLEGIO LICEO INTEGRADO",
-            "direccion": "CL 8 N 12-37 ALGARRA II",
-            "mesa": 4
-        }
-    },
-    {
-        "cedula": "35427549",
-        "nombre": "LOUISIANA",
-        "apellidos": "RIVERA PINZON",
-        "status": "Activo",
-        "puesto_votacion": {
-            "departamento": "CUNDINAMARCA",
-            "municipio": "ZIPAQUIRA",
-            "puesto": "COLEGIO LICEO INTEGRADO",
-            "direccion": "CL 8 N 12-37 ALGARRA II",
-            "mesa": 26
-        }
-    },
-    {
-        "cedula": "21164485",
-        "nombre": "MARIA DEL CARMEN",
-        "apellidos": "MARTINEZ CASTRO",
-        "status": "Activo",
-        "puesto_votacion": {
-            "departamento": "BOGOTA D.C.",
-            "municipio": "BOGOTA D.C.",
-            "puesto": "ALESSANDRO VOLTA",
-            "direccion": "CLL 119 No 4-79",
-            "mesa": 3
-        }
-    },
-    {
-        "cedula": "11189781",
-        "nombre": "EDUARDO ARTURO",
-        "apellidos": "RIVERA MARTINEZ",
-        "status": "Activo",
-        "puesto_votacion": {
-            "departamento": "BOGOTA D.C.",
-            "municipio": "BOGOTA D.C.",
-            "puesto": "ALESSANDRO VOLTA",
-            "direccion": "CLL 119 No 4-79",
-            "mesa": 1
-        }
-    },
-    {
-        "cedula": "1233903423",
-        "nombre": "DANIEL EDUARDO",
-        "apellidos": "RIVERA NOGUERA",
-        "status": "Activo",
-        "puesto_votacion": {
-            "departamento": "BOGOTA D.C.",
-            "municipio": "BOGOTA D.C.",
-            "puesto": "ALESSANDRO VOLTA",
-            "direccion": "CLL 119 No 4-79",
-            "mesa": 26
-        }
-    },
-    {
-        "cedula": "41057506",
-        "nombre": "JANI",
-        "apellidos": "ALVES SOUZA",
-        "status": "Activo",
-        "puesto_votacion": {
-            "departamento": "BOGOTA D.C.",
-            "municipio": "BOGOTA D.C.",
-            "puesto": "ALESSANDRO VOLTA",
-            "direccion": "CLL 119 No 4-79",
-            "mesa": 5
-        }
-    },
-    {
-        "cedula": "11330794",
-        "nombre": "CARLOS ALBERTO",
-        "apellidos": "MARTINEZ CASTRO",
-        "status": "Inhabilitado",
-        "novedad": "Cancelada por Muerte"
-    },
-    {
-        "cedula": "35400499",
-        "nombre": "AMPARO",
-        "apellidos": "NAVARRO DE MARTINEZ",
-        "status": "Inhabilitado",
-        "novedad": "Cancelada por Muerte"
+  {
+    "cedula": "3267447",
+    "nombre": "CARLOS ARTURO",
+    "apellidos": "RIVERA GOMEZ",
+    "status": "Activo",
+    "puesto_votacion": {
+      "departamento": "CUNDINAMARCA",
+      "municipio": "ZIPAQUIRA",
+      "puesto": "COLEGIO LICEO INTEGRADO",
+      "direccion": "CL 8 N 12-37 ALGARRA II",
+      "mesa": 4
     }
+  },
+  {
+    "cedula": "35427549",
+    "nombre": "LOUISIANA",
+    "apellidos": "RIVERA PINZON",
+    "status": "Activo",
+    "puesto_votacion": {
+      "departamento": "CUNDINAMARCA",
+      "municipio": "ZIPAQUIRA",
+      "puesto": "COLEGIO LICEO INTEGRADO",
+      "direccion": "CL 8 N 12-37 ALGARRA II",
+      "mesa": 26
+    }
+  },
+  {
+    "cedula": "21164485",
+    "nombre": "MARIA DEL CARMEN",
+    "apellidos": "MARTINEZ CASTRO",
+    "status": "Activo",
+    "puesto_votacion": {
+      "departamento": "BOGOTA D.C.",
+      "municipio": "BOGOTA D.C.",
+      "puesto": "ALESSANDRO VOLTA",
+      "direccion": "CLL 119 No 4-79",
+      "mesa": 3
+    }
+  },
+  {
+    "cedula": "11189781",
+    "nombre": "EDUARDO ARTURO",
+    "apellidos": "RIVERA MARTINEZ",
+    "status": "Activo",
+    "puesto_votacion": {
+      "departamento": "BOGOTA D.C.",
+      "municipio": "BOGOTA D.C.",
+      "puesto": "ALESSANDRO VOLTA",
+      "direccion": "CLL 119 No 4-79",
+      "mesa": 1
+    }
+  },
+  {
+    "cedula": "1233903423",
+    "nombre": "DANIEL EDUARDO",
+    "apellidos": "RIVERA NOGUERA",
+    "status": "Activo",
+    "puesto_votacion": {
+      "departamento": "BOGOTA D.C.",
+      "municipio": "BOGOTA D.C.",
+      "puesto": "ALESSANDRO VOLTA",
+      "direccion": "CLL 119 No 4-79",
+      "mesa": 26
+    }
+  },
+  {
+    "cedula": "41057506",
+    "nombre": "JANI",
+    "apellidos": "ALVES SOUZA",
+    "status": "Activo",
+    "puesto_votacion": {
+      "departamento": "BOGOTA D.C.",
+      "municipio": "BOGOTA D.C.",
+      "puesto": "ALESSANDRO VOLTA",
+      "direccion": "CLL 119 No 4-79",
+      "mesa": 5
+    }
+  },
+  {
+    "cedula": "11330794",
+    "nombre": "CARLOS ALBERTO",
+    "apellidos": "MARTINEZ CASTRO",
+    "status": "Inhabilitado",
+    "novedad": "Cancelada por Muerte"
+  },
+  {
+    "cedula": "35400499",
+    "nombre": "AMPARO",
+    "apellidos": "NAVARRO DE MARTINEZ",
+    "status": "Inhabilitado",
+    "novedad": "Cancelada por Muerte"
+  }
 ]

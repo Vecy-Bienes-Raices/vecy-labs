@@ -10,7 +10,11 @@
       "nombre_vicepresidente": "Fórmula Vicepresidencial Alfa",
       "foto_vicepresidente": "https://url-simulada.com/vice-a.png",
       "bio": "Biografía de la fórmula del Partido Sólido, enfocada en la experiencia y la estabilidad.",
-      "propuestas": ["Estabilidad económica", "Seguridad integral", "Infraestructura moderna"]
+      "propuestas": [
+        "Estabilidad económica",
+        "Seguridad integral",
+        "Infraestructura moderna"
+      ]
     },
     {
       "id": "pv-002",
@@ -22,7 +26,11 @@
       "nombre_vicepresidente": "Fórmula Vicepresidencial Beta",
       "foto_vicepresidente": "https://url-simulada.com/vice-b.png",
       "bio": "Biografía de la fórmula de la Coalición El Futuro, centrada en la innovación social y la sostenibilidad.",
-      "propuestas": ["Transición energética", "Educación digital universal", "Reforma a la salud"]
+      "propuestas": [
+        "Transición energética",
+        "Educación digital universal",
+        "Reforma a la salud"
+      ]
     },
     {
       "id": "pv-003",
@@ -34,7 +42,11 @@
       "nombre_vicepresidente": "Fórmula Vicepresidencial Gamma",
       "foto_vicepresidente": "https://url-simulada.com/vice-c.png",
       "bio": "Biografía de la fórmula del Movimiento Cívico, con un discurso de lucha contra la corrupción.",
-      "propuestas": ["Transparencia total", "Justicia equitativa", "Fortalecimiento regional"]
+      "propuestas": [
+        "Transparencia total",
+        "Justicia equitativa",
+        "Fortalecimiento regional"
+      ]
     },
     {
       "id": "pv-vb",
@@ -55,6 +67,7 @@
       "partido": "Partido Sólido (Simulado)",
       "logo": "https://url-simulada.com/logo-partido-a.png",
       "tipo_lista": "cerrada",
+      "foto_candidato": "https://url-simulada.com/senador-a1.png",
       "candidatos_lista": ["Senador 1A", "Senador 2A", "Senador 3A"]
     },
     {
@@ -62,6 +75,7 @@
       "partido": "Coalición El Futuro (Simulado)",
       "logo": "https://url-simulada.com/logo-partido-b.png",
       "tipo_lista": "abierta",
+      "foto_candidato": "https://url-simulada.com/senador-b1.png",
       "candidatos_lista": ["S1-Juan", "S2-María", "S3-Pedro"]
     },
     {
@@ -69,13 +83,15 @@
       "partido": "Movimiento Cívico (Simulado)",
       "logo": "https://url-simulada.com/logo-partido-c.png",
       "tipo_lista": "abierta",
+      "foto_candidato": "https://url-simulada.com/senador-c1.png",
       "candidatos_lista": ["S1-Luis", "S2-Ana", "S3-Carlos"]
     },
     {
       "id": "s-vb",
       "partido": "Voto en Blanco",
       "logo": "https://url-simulada.com/voto-en-blanco.png",
-      "tipo_lista": "blanco"
+      "tipo_lista": "blanco",
+      "foto_candidato": "https://url-simulada.com/blanco.png"
     }
   ],
   "senado_indigena": [
@@ -84,6 +100,7 @@
       "partido": "Movimiento AICO (Simulado)",
       "logo": "https://url-simulada.com/logo-aico.png",
       "tipo_lista": "abierta",
+      "foto_candidato": "https://url-simulada.com/senador-indigena-a1.png",
       "candidatos_lista": ["SI1-Taita", "SI2-Mama"]
     },
     {
@@ -91,25 +108,119 @@
       "partido": "Movimiento MAIS (Simulado)",
       "logo": "https://url-simulada.com/logo-mais.png",
       "tipo_lista": "abierta",
+      "foto_candidato": "https://url-simulada.com/senador-indigena-b1.png",
       "candidatos_lista": ["SI1-Sol", "SI2-Luna"]
     },
     {
       "id": "si-vb",
       "partido": "Voto en Blanco",
       "logo": "https://url-simulada.com/voto-en-blanco.png",
-      "tipo_lista": "blanco"
+      "tipo_lista": "blanco",
+      "foto_candidato": "https://url-simulada.com/blanco.png"
     }
   ],
   "camara_territorial": {
     "11": [
-      { "id": "c-bg-001", "partido": "Partido Sólido (Simulado)", "logo": "https://url-simulada.com/logo-partido-a.png", "tipo_lista": "abierta" },
-      { "id": "c-bg-002", "partido": "Coalición El Futuro (Simulado)", "logo": "https://url-simulada.com/logo-partido-b.png", "tipo_lista": "cerrada" },
-      { "id": "c-bg-vb", "partido": "Voto en Blanco", "logo": "https://url-simulada.com/voto-en-blanco.png", "tipo_lista": "blanco" }
+      {
+        "id": "c-bg-001",
+        "partido": "Partido Sólido (Simulado)",
+        "logo": "https://url-simulada.com/logo-partido-a.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-a1.png"
+      },
+      {
+        "id": "c-bg-002",
+        "partido": "Coalición El Futuro (Simulado)",
+        "logo": "https://url-simulada.com/logo-partido-b.png",
+        "tipo_lista": "cerrada",
+        "foto_candidato": "https://url-simulada.com/camara-b1.png"
+      },
+      {
+        "id": "c-bg-003",
+        "partido": "Movimiento Cívico (Simulado)",
+        "logo": "https://url-simulada.com/logo-partido-c.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-c1.png"
+      },
+      {
+        "id": "c-bg-004",
+        "partido": "Alianza Verde (Simulado)",
+        "logo": "https://url-simulada.com/logo-verde.png",
+        "tipo_lista": "cerrada",
+        "foto_candidato": "https://url-simulada.com/camara-verde1.png"
+      },
+      {
+        "id": "c-bg-005",
+        "partido": "Centro Democrático (Simulado)",
+        "logo": "https://url-simulada.com/logo-centro.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-centro1.png"
+      },
+      {
+        "id": "c-bg-006",
+        "partido": "Polo Democrático (Simulado)",
+        "logo": "https://url-simulada.com/logo-polo.png",
+        "tipo_lista": "cerrada",
+        "foto_candidato": "https://url-simulada.com/camara-polo1.png"
+      },
+      {
+        "id": "c-bg-vb",
+        "partido": "Voto en Blanco",
+        "logo": "https://url-simulada.com/voto-en-blanco.png",
+        "tipo_lista": "blanco",
+        "foto_candidato": "https://url-simulada.com/blanco.png"
+      }
     ],
     "05": [
-      { "id": "c-an-001", "partido": "Partido Sólido (Simulado)", "logo": "https://url-simulada.com/logo-partido-a.png", "tipo_lista": "abierta" },
-      { "id": "c-an-002", "partido": "Movimiento Cívico (Simulado)", "logo": "https://url-simulada.com/logo-partido-c.png", "tipo_lista": "abierta" },
-      { "id": "c-an-vb", "partido": "Voto en Blanco", "logo": "https://url-simulada.com/voto-en-blanco.png", "tipo_lista": "blanco" }
+      {
+        "id": "c-an-001",
+        "partido": "Partido Sólido (Simulado)",
+        "logo": "https://url-simulada.com/logo-partido-a.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-a2.png"
+      },
+      {
+        "id": "c-an-002",
+        "partido": "Movimiento Cívico (Simulado)",
+        "logo": "https://url-simulada.com/logo-partido-c.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-c2.png"
+      },
+      {
+        "id": "c-an-003",
+        "partido": "Coalición El Futuro (Simulado)",
+        "logo": "https://url-simulada.com/logo-partido-b.png",
+        "tipo_lista": "cerrada",
+        "foto_candidato": "https://url-simulada.com/camara-b2.png"
+      },
+      {
+        "id": "c-an-004",
+        "partido": "Alianza Verde (Simulado)",
+        "logo": "https://url-simulada.com/logo-verde.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-verde2.png"
+      },
+      {
+        "id": "c-an-005",
+        "partido": "Centro Democrático (Simulado)",
+        "logo": "https://url-simulada.com/logo-centro.png",
+        "tipo_lista": "cerrada",
+        "foto_candidato": "https://url-simulada.com/camara-centro2.png"
+      },
+      {
+        "id": "c-an-006",
+        "partido": "Polo Democrático (Simulado)",
+        "logo": "https://url-simulada.com/logo-polo.png",
+        "tipo_lista": "abierta",
+        "foto_candidato": "https://url-simulada.com/camara-polo2.png"
+      },
+      {
+        "id": "c-an-vb",
+        "partido": "Voto en Blanco",
+        "logo": "https://url-simulada.com/voto-en-blanco.png",
+        "tipo_lista": "blanco",
+        "foto_candidato": "https://url-simulada.com/blanco.png"
+      }
     ]
   }
 }
