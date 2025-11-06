@@ -1,4 +1,25 @@
-// === SCRIPT.JS FINAL, COMPLETO Y VERIFICADO ===
+// === SCRIPT.JS FINAL, COMPLETO Y CON FLUJO MODULAR ===
+
+function mostrarAlerta(titulo, mensaje, tipo = "info") {
+  const modal = document.getElementById("custom-alert-modal");
+  const icon = document.getElementById("alert-icon");
+  document.getElementById("alert-title").textContent = titulo;
+  document.getElementById("alert-message").textContent = mensaje;
+
+  icon.className = "";
+  if (tipo === "success") {
+    icon.innerHTML = "✅";
+    icon.classList.add("icon-success");
+  } else if (tipo === "error") {
+    icon.innerHTML = "❌";
+    icon.classList.add("icon-error");
+  } else {
+    icon.innerHTML = "ℹ️";
+    icon.classList.add("icon-info");
+  }
+
+  modal.classList.remove("oculto");
+}
 
 // --- VARIABLES GLOBALES ---
 let votantes = [],
@@ -18,25 +39,22 @@ const etapas = [
 ];
 let numeroConsecutivo = 1;
 
-// --- INICIALIZACIÓN DE LA APLICACIÓN ---
+// --- INICIALIZACIÓN ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Configura únicamente los botones de la pantalla de bienvenida al cargar
-  const btnVotante = document.getElementById("btn-iniciar-votante");
-  const btnOperador = document.getElementById("btn-iniciar-operador");
-  if (btnVotante) btnVotante.addEventListener("click", iniciarApp);
-  if (btnOperador) {
-    btnOperador.addEventListener("click", () => {
+  document
+    .getElementById("btn-iniciar-votante")
+    ?.addEventListener("click", iniciarApp);
+  document
+    .getElementById("btn-iniciar-operador")
+    ?.addEventListener("click", () => {
       if (prompt("Ingrese PIN de operador:") === "2026") iniciarApp();
       else alert("PIN incorrecto.");
     });
-  }
 });
 
 function iniciarApp() {
-  // Oculta la bienvenida, muestra la app y CARGA los datos
   document.getElementById("welcome-screen").style.display = "none";
   document.getElementById("app-container").classList.remove("oculto");
-
   Promise.all([
     fetch("votantes.json").then((res) => res.json()),
     fetch("candidatos.json").then((res) => res.json()),
@@ -46,7 +64,7 @@ function iniciarApp() {
       votantes = votantesData;
       candidatosData = candData;
       datosTerritoriales = terrData;
-      inicializarComponentes(); // Solo inicializa el resto cuando los datos están listos
+      inicializarComponentes();
     })
     .catch((error) => console.error("Error crítico al cargar datos:", error));
 }
@@ -54,30 +72,32 @@ function iniciarApp() {
 function inicializarComponentes() {
   configurarNavegacion();
   configurarFormularios();
-  inicializarSelectoresTerritoriales();
   renderizarCandidatos();
   console.log("Aplicación Principal Inicializada.");
 }
 
-// --- NAVEGACIÓN Y CONFIGURACIÓN DE FORMULARIOS ---
+// --- NAVEGACIÓN Y CONFIGURACIÓN ---
 function configurarNavegacion() {
   document.querySelectorAll("nav button").forEach((boton) => {
     boton.addEventListener("click", () =>
       mostrarSeccion(boton.id.replace("btn-", ""))
     );
   });
+
   document.getElementById("btn-siguiente")?.addEventListener("click", () => {
-    if (etapaActual < etapas.length - 2) {
+    if (etapaActual < etapas.length - 1) {
       etapaActual++;
       mostrarEtapa(etapaActual);
     }
   });
+
   document.getElementById("btn-anterior")?.addEventListener("click", () => {
     if (etapaActual > 0) {
       etapaActual--;
       mostrarEtapa(etapaActual);
     }
   });
+
   mostrarSeccion("votacion");
 }
 
@@ -85,13 +105,16 @@ function mostrarSeccion(seccionId) {
   document
     .querySelectorAll(".seccion")
     .forEach((s) => s.classList.add("oculto"));
-  document.getElementById(seccionId)?.classList.remove("oculto");
+  const seccionActiva = document.getElementById(seccionId);
+  if (seccionActiva) {
+    seccionActiva.classList.remove("oculto");
+    if (seccionId === "resultados") {
+      actualizarResultados();
+    }
+  }
 }
 
 function configurarFormularios() {
-  document
-    .getElementById("form-registro")
-    ?.addEventListener("submit", registrarVotante);
   document
     .getElementById("btn-verificar-cedula")
     ?.addEventListener("click", verificarCedula);
@@ -99,55 +122,73 @@ function configurarFormularios() {
     .getElementById("btn-leer-documento")
     ?.addEventListener("click", simularLecturaDocumento);
   document
-    .getElementById("btn-capturar-foto")
+    .getElementById("btn-confirmar-rostro")
     ?.addEventListener("click", capturarFotoFacial);
   document
-    .getElementById("btn-verificar-huella")
+    .getElementById("btn-confirmar-huella")
     ?.addEventListener("click", verificarHuella);
+  document.getElementById("alert-close-btn")?.addEventListener("click", () => {
+    document.getElementById("custom-alert-modal").classList.add("oculto");
+  });
+  document
+    .getElementById("bypass-huella-checkbox")
+    ?.addEventListener("change", (e) => {
+      if (e.target.checked) {
+        verificacionBiometrica.huella = true;
+        abrirTarjetonSiCompleto();
+      } else {
+        verificacionBiometrica.huella = false;
+      }
+    });
 }
 
-// --- LÓGICA DE VERIFICACIÓN DE IDENTIDAD ---
+// --- LÓGICA DE VERIFICACIÓN (CORREGIDA) ---
 function verificarCedula() {
   const votante = votantes.find(
     (v) => v.cedula === document.getElementById("cedula-voto").value
   );
   if (!votante) {
-    alert("Cédula no encontrada.");
+    mostrarAlerta(
+      "Error de Verificación",
+      "El número de cédula no fue encontrado.",
+      "error"
+    );
     return;
   }
   if (votos[votante.cedula]) {
-    alert("Este votante ya ha sufragado.");
+    mostrarAlerta(
+      "Información",
+      "Esta persona ya ha ejercido su derecho al voto.",
+      "info"
+    );
     return;
   }
   if (votante.status !== "Activo") {
-    alert(`VOTANTE INHABILITADO\nNovedad: ${votante.novedad}`);
+    mostrarAlerta(
+      "Votante Inhabilitado",
+      `Novedad: ${votante.novedad || "Sin especificar"}`,
+      "error"
+    );
     return;
   }
 
   votanteActual = votante;
-  const { nombre, apellidos, puesto_votacion } = votante;
+  const { nombre, apellidos, status } = votante;
   document.getElementById(
     "info-nombre"
   ).textContent = `Nombre: ${nombre} ${apellidos}`;
-  document.getElementById(
-    "info-departamento"
-  ).textContent = `Departamento: ${puesto_votacion.departamento}`;
-  document.getElementById(
-    "info-municipio"
-  ).textContent = `Municipio: ${puesto_votacion.municipio}`;
-  document.getElementById(
-    "info-puesto"
-  ).textContent = `Puesto: ${puesto_votacion.puesto}`;
-  document.getElementById(
-    "info-direccion"
-  ).textContent = `Dirección: ${puesto_votacion.direccion}`;
-  document.getElementById(
-    "info-mesa"
-  ).textContent = `Mesa: ${puesto_votacion.mesa}`;
-  ["datos-votante", "verificacion-biometrica"].forEach((id) =>
-    document.getElementById(id).classList.remove("oculto")
+  document.getElementById("info-status").textContent = `Estado: ${status}`;
+  document.getElementById("datos-votante").classList.remove("oculto");
+
+  mostrarAlerta(
+    "Verificación Exitosa",
+    "Cédula encontrada. Procediendo a la verificación facial.",
+    "success"
   );
-  inicializarCamara();
+  setTimeout(() => {
+    document.getElementById("custom-alert-modal").classList.add("oculto");
+    abrirModuloFacial();
+  }, 1500);
 }
 
 function simularLecturaDocumento() {
@@ -156,60 +197,128 @@ function simularLecturaDocumento() {
   );
   if (votanteHabilitado) {
     document.getElementById("cedula-voto").value = votanteHabilitado.cedula;
-    verificarCedula();
+    // No llama a verificarCedula() directamente para simular que el usuario debe hacer clic
+    mostrarAlerta(
+      "Simulación de Escaneo",
+      "Se ha leído un documento. Por favor, haga clic en 'Verificar Cédula' para continuar.",
+      "info"
+    );
   } else {
-    alert("No hay más votantes habilitados para simular.");
+    mostrarAlerta(
+      "Información",
+      "No hay más votantes habilitados para simular.",
+      "info"
+    );
   }
 }
 
-async function inicializarCamara() {
-  detenerCamara();
+async function abrirModuloFacial() {
+  document.getElementById("face-scan-modal").classList.remove("oculto");
+  const animationContainer = document.getElementById("face-scan-animation");
+  animationContainer.innerHTML = `<video autoplay muted></video><div class="scan-overlay"></div>`;
+
   try {
-    const video = document.getElementById("video-camara");
+    const video = animationContainer.querySelector("video");
     stream = await navigator.mediaDevices.getUserMedia({ video: true });
     video.srcObject = stream;
-    video.classList.remove("oculto");
   } catch (e) {
     console.error("Error de cámara:", e);
+    document.getElementById("face-scan-animation").innerHTML =
+      "<p>Cámara no detectada. Por favor, permita el acceso.</p>";
   }
 }
 
 function detenerCamara() {
   stream?.getTracks().forEach((track) => track.stop());
-  document.getElementById("video-camara")?.classList.add("oculto");
 }
 
+// --- MÓDULOS BIOMÉTRICOS (RESTAURADOS Y MEJORADOS) ---
 function capturarFotoFacial() {
-  const estado = document.getElementById("estado-facial");
-  estado.textContent = "Procesando...";
+  const btn = document.getElementById("btn-confirmar-rostro");
+  const overlay = document.querySelector("#face-scan-modal .scan-overlay");
+  btn.textContent = "Escaneando...";
+  btn.disabled = true;
+  if (overlay) overlay.style.opacity = 1;
+
+  // Simulación de prueba y error
   setTimeout(() => {
-    verificacionBiometrica.facial = true; // Simula éxito
-    estado.textContent = "Verificado ✓";
-    actualizarEstadoGeneral();
-  }, 1000);
+    const exito = Math.random() > 0.3; // 70% de probabilidad de éxito
+    if (exito) {
+      verificacionBiometrica.facial = true;
+      btn.textContent = "Escanear Rostro";
+      btn.disabled = false;
+      document.getElementById("face-scan-modal").classList.add("oculto");
+      detenerCamara();
+      mostrarAlerta(
+        "Éxito",
+        "Verificación facial completada. Procediendo a la huella.",
+        "success"
+      );
+      setTimeout(() => {
+        document.getElementById("custom-alert-modal").classList.add("oculto");
+        document.getElementById("fingerprint-modal").classList.remove("oculto");
+      }, 1500);
+    } else {
+      btn.textContent = "Reintentar Escaneo";
+      btn.disabled = false;
+      if (overlay) overlay.style.opacity = 0;
+      document.getElementById("face-scan-title").textContent =
+        "Error de Escaneo";
+      document.getElementById("face-scan-message").textContent =
+        "No se pudo verificar el rostro. Por favor, asegúrese de tener buena iluminación y vuelva a intentarlo.";
+    }
+  }, 2500);
 }
 
 function verificarHuella() {
-  const estado = document.getElementById("estado-huella");
-  estado.textContent = "Procesando...";
+  const btn = document.getElementById("btn-confirmar-huella");
+  const pad = document.getElementById("fingerprint-pad");
+  const scanLine = pad.querySelector(".fingerprint-scan-line");
+  const svgPath = pad.querySelector("#fingerprint-svg path");
+
+  btn.textContent = "Verificando...";
+  btn.disabled = true;
+
+  // Inicia la animación de escaneo
+  pad.classList.add("scanning");
+  scanLine.classList.add("scanning");
+  if (svgPath) svgPath.style.strokeDashoffset = "0";
+
   setTimeout(() => {
-    verificacionBiometrica.huella = true; // Simula éxito
-    estado.textContent = "Verificado ✓";
-    actualizarEstadoGeneral();
-  }, 1000);
+    verificacionBiometrica.huella = true;
+    btn.textContent = "Escanear Huella";
+    btn.disabled = false;
+
+    // Cambia a estado de éxito
+    pad.classList.remove("scanning");
+    pad.classList.add("success");
+    if (svgPath) svgPath.style.stroke = "#28a745";
+
+    abrirTarjetonSiCompleto();
+  }, 2200); // Duración de la animación
 }
 
-// --- LÓGICA DEL TARJETÓN GUIADO ---
-function actualizarEstadoGeneral() {
+function abrirTarjetonSiCompleto() {
   if (verificacionBiometrica.facial && verificacionBiometrica.huella) {
-    detenerCamara();
-    etapaActual = 0;
-    mostrarEtapa(etapaActual);
-    document.getElementById("tarjeton-modal").classList.remove("oculto");
+    mostrarAlerta(
+      "Verificación Completa",
+      "Identidad confirmada. Presentando tarjetón electoral.",
+      "success"
+    );
+    setTimeout(() => {
+      document
+        .querySelectorAll(".verification-modal")
+        .forEach((modal) => modal.classList.add("oculto"));
+      etapaActual = 0;
+      mostrarEtapa(etapaActual);
+      document.getElementById("tarjeton-modal").classList.remove("oculto");
+    }, 1500);
   }
 }
 
+// --- LÓGICA DEL TARJETÓN Y VOTO (SIN CAMBIOS) ---
 function mostrarEtapa(indice) {
+  // Oculta todas las etapas y luego muestra la correcta
   document
     .querySelectorAll(".seccion-voto")
     .forEach((el) => el.classList.add("oculto"));
@@ -217,19 +326,57 @@ function mostrarEtapa(indice) {
     `.seccion-voto[data-etapa="${indice}"]`
   );
   if (etapaActiva) etapaActiva.classList.remove("oculto");
+
+  // Actualiza el título
   document.getElementById("tarjeton-titulo-etapa").textContent = etapas[indice];
 
+  // --- LÓGICA DE BOTONES CORREGIDA Y A PRUEBA DE ERRORES ---
   const btnAnterior = document.getElementById("btn-anterior");
   const btnSiguiente = document.getElementById("btn-siguiente");
   const btnVotar = document.getElementById("btn-votar");
 
-  btnAnterior.classList.toggle("oculto", indice === 0);
-  const esUltimaEtapa = indice === etapas.length - 2;
-  btnSiguiente.classList.toggle("oculto", esUltimaEtapa);
-  btnVotar.classList.toggle("oculto", !esUltimaEtapa);
+  if (indice === etapas.length - 1) {
+    // Estás en la pantalla de RESUMEN FINAL (índice 3)
+    generarResumen();
+    btnAnterior.textContent = "Corregir";
+    btnAnterior.classList.remove("oculto");
+    btnSiguiente.classList.add("oculto"); // OCULTA el botón "Siguiente"
+    btnVotar.classList.remove("oculto"); // MUESTRA el botón "Votar"
+  } else {
+    // Estás en cualquiera de las pantallas de SELECCIÓN (índices 0, 1, 2)
+    btnAnterior.textContent = "Anterior";
+    btnAnterior.classList.toggle("oculto", indice === 0); // Oculta "Anterior" SOLO en la primera página
+
+    btnSiguiente.classList.remove("oculto"); // "Siguiente" SIEMPRE es visible en las páginas de selección
+    btnVotar.classList.add("oculto"); // "Votar" SIEMPRE está oculto en las páginas de selección
+  }
 }
 
-// --- RENDERIZADO DE CANDIDATOS ---
+function generarResumen() {
+  const contenedor = document.getElementById("resumen-votacion");
+  if (!contenedor) return;
+  const p = candidatosData.presidencia_vicepresidencia.find(
+    (c) => c.id === votosActuales.presidencia
+  );
+  const s = candidatosData.senado_nacional.find(
+    (c) => c.id === votosActuales.senado
+  );
+  const m = candidatosData.camara_territorial["11"].find(
+    (c) => c.id === votosActuales.camara
+  );
+  contenedor.innerHTML = `
+        <div class="resumen-item"><h4>Presidente y Vicepresidente</h4><p>${
+          p ? p.partido : "No seleccionado"
+        }</p></div>
+        <div class="resumen-item"><h4>Senado de la República</h4><p>${
+          s ? s.partido : "No seleccionado"
+        }</p></div>
+        <div class="resumen-item"><h4>Cámara de Representantes</h4><p>${
+          m ? m.partido : "No seleccionado"
+        }</p></div>
+    `;
+}
+
 function renderizarCandidatos() {
   numeroConsecutivo = 1;
   renderizarSeccionCandidatos(
@@ -251,8 +398,9 @@ function renderizarSeccionCandidatos(seccion, data) {
   cont.innerHTML = "";
   data?.forEach((c) => {
     cont.appendChild(crearTarjetaCandidato(c, seccion, numeroConsecutivo));
-    numeroConsecutivo++;
+    if (seccion !== "presidencia") numeroConsecutivo++;
   });
+  if (seccion === "presidencia") numeroConsecutivo = 1; // Reset for next category
 }
 
 function crearTarjetaCandidato(c, seccion, numero) {
@@ -266,7 +414,6 @@ function crearTarjetaCandidato(c, seccion, numero) {
 
   let visualHTML = "";
   if (seccion === "presidencia") {
-    // Lógica para Presidente y Vicepresidente
     visualHTML = `
                 <div class="candidato-fotos">
                     <img src="${c.foto_presidente}" alt="" class="candidato-foto presidente" onerror="this.src='${placeholderFoto}'">
@@ -275,7 +422,6 @@ function crearTarjetaCandidato(c, seccion, numero) {
                 <img src="${c.logo_partido}" alt="" class="candidato-logo" onerror="this.src='${placeholderLogo}'">
             `;
   } else {
-    // --- NUEVA LÓGICA PARA SENADO Y CÁMARA ---
     visualHTML = `
                 <div class="candidato-fotos">
                     <img src="${c.foto_candidato}" alt="" class="candidato-foto" onerror="this.src='${placeholderFoto}'">
@@ -311,7 +457,7 @@ function crearTarjetaCandidato(c, seccion, numero) {
   card.addEventListener("click", () => seleccionarCandidato(c.id, seccion));
   return card;
 }
-// --- LÓGICA DE SELECCIÓN Y VOTO ---
+
 function seleccionarCandidato(id, seccion) {
   votosActuales[seccion] = votosActuales[seccion] === id ? null : id;
   actualizarSeleccionVisual(seccion);
@@ -342,12 +488,28 @@ function actualizarSeleccionVisual(seccion) {
 }
 
 function registrarVoto() {
+  if (etapaActual !== etapas.length - 1) {
+    mostrarAlerta(
+      "Error",
+      "Confirme su selección en la pantalla de resumen para poder votar.",
+      "error"
+    );
+    return;
+  }
   if (!Object.values(votosActuales).every((v) => v)) {
-    alert("Debe seleccionar una opción en cada categoría para poder votar.");
+    mostrarAlerta(
+      "Error",
+      "Debe seleccionar una opción en cada categoría para poder votar.",
+      "error"
+    );
     return;
   }
   votos[votanteActual.cedula] = { ...votosActuales };
-  alert("¡Voto registrado exitosamente!");
+  mostrarAlerta(
+    "¡Voto Registrado!",
+    "Su voto ha sido procesado exitosamente.",
+    "success"
+  );
   actualizarResultados();
   resetearFlujoVotacion();
 }
@@ -355,22 +517,10 @@ function registrarVoto() {
 function resetearFlujoVotacion() {
   document.getElementById("tarjeton-modal").classList.add("oculto");
   document.getElementById("cedula-voto").value = "";
-  ["datos-votante", "verificacion-biometrica"].forEach((id) =>
-    document.getElementById(id).classList.add("oculto")
-  );
+  document.getElementById("datos-votante").classList.add("oculto");
   verificacionBiometrica = { facial: false, huella: false };
   votosActuales = { presidencia: null, senado: null, camara: null };
-  document.getElementById("estado-facial").textContent = "Pendiente";
-  document.getElementById("estado-huella").textContent = "Pendiente";
   renderizarCandidatos();
-}
-
-function inicializarSelectoresTerritoriales() {
-  // Lógica para los selects de la página de registro (si se desarrolla en el futuro)
-}
-function registrarVotante(e) {
-  e.preventDefault();
-  alert("Funcionalidad de registro en desarrollo.");
 }
 
 function actualizarResultados() {
@@ -379,30 +529,21 @@ function actualizarResultados() {
 
   contenedorResultados.innerHTML = ""; // Limpia los resultados anteriores
 
-  const conteoVotos = {
-    presidencia: {},
-    senado: {},
-    camara: {},
-  };
+  const conteoVotos = { presidencia: {}, senado: {}, camara: {} };
 
-  // 1. Contar todos los votos
   for (const cedula in votos) {
     const voto = votos[cedula];
-    if (voto.presidencia) {
+    if (voto.presidencia)
       conteoVotos.presidencia[voto.presidencia] =
         (conteoVotos.presidencia[voto.presidencia] || 0) + 1;
-    }
-    if (voto.senado) {
+    if (voto.senado)
       conteoVotos.senado[voto.senado] =
         (conteoVotos.senado[voto.senado] || 0) + 1;
-    }
-    if (voto.camara) {
+    if (voto.camara)
       conteoVotos.camara[voto.camara] =
         (conteoVotos.camara[voto.camara] || 0) + 1;
-    }
   }
 
-  // 2. Mostrar los resultados para cada categoría
   mostrarResultadosPorCategoria(
     "presidencia",
     "Presidente y Vicepresidente",
@@ -435,7 +576,6 @@ function mostrarResultadosPorCategoria(key, titulo, conteo, candidatos) {
   if (totalVotosCategoria === 0) {
     html += "<p>Aún no hay votos registrados para esta categoría.</p>";
   } else {
-    // Ordena los resultados de mayor a menor
     const resultadosOrdenados = Object.entries(conteo).sort(
       ([, a], [, b]) => b - a
     );

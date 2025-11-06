@@ -75,38 +75,10 @@
                 <div id="datos-votante" class="oculto">
                   <h3>Datos del Votante:</h3>
                   <p id="info-nombre"></p>
-                  <p id="info-departamento"></p>
-                  <p id="info-municipio"></p>
-                  <p id="info-puesto"></p>
-                  <p id="info-direccion"></p>
-                  <p id="info-mesa"></p>
+                  <p id="info-status"></p>
                 </div>
               </div>
-              <div class="verification-column">
-                <div id="verificacion-biometrica" class="oculto">
-                  <h3>Verificación Biométrica</h3>
-                  <div class="biometria-item">
-                    <p>Verificación Facial</p>
-                    <div id="estado-facial">Pendiente</div>
-                    <button type="button" id="btn-capturar-foto">
-                      Iniciar
-                    </button>
-                  </div>
-                  <div class="biometria-item">
-                    <p>Verificación de Huella</p>
-                    <div id="estado-huella">Pendiente</div>
-                    <button type="button" id="btn-verificar-huella">
-                      Iniciar
-                    </button>
-                  </div>
-                  <video
-                    id="video-camara"
-                    class="oculto"
-                    autoplay
-                    muted
-                  ></video>
-                </div>
-              </div>
+              <div class="verification-column"></div>
             </div>
           </section>
 
@@ -132,6 +104,12 @@
             <div class="seccion-voto oculto" data-etapa="2">
               <div id="candidatos-camara" class="candidatos-grid"></div>
             </div>
+            <!-- Pega esta línea al final, dentro de #etapas-container -->
+            <div class="seccion-voto oculto" data-etapa="3">
+              <div id="resumen-votacion">
+                <!-- El resumen del voto se generará aquí con JavaScript -->
+              </div>
+            </div>
           </div>
           <div id="tarjeton-navegacion">
             <button id="btn-anterior">Anterior</button>
@@ -139,6 +117,74 @@
               REGISTRAR VOTO
             </button>
             <button id="btn-siguiente">Siguiente</button>
+          </div>
+        </div>
+      </div>
+      <!-- MÓDULO DE ESCANEO FACIAL -->
+      <div id="face-scan-modal" class="verification-modal oculto">
+        <div class="verification-content glass-card">
+          <h2>Reconocimiento Facial</h2>
+          <p>Por favor, centre su rostro en el recuadro.</p>
+          <div id="face-scan-animation">
+            <!-- Aquí irá la animación de la cámara -->
+          </div>
+          <button id="btn-confirmar-rostro">Escanear Rostro</button>
+        </div>
+      </div>
+
+      <!-- MÓDULO DE VERIFICACIÓN DE HUELLA -->
+      <div id="fingerprint-modal" class="verification-modal oculto">
+        <div class="verification-content glass-card">
+          <h2>Verificación de Huella Dactilar</h2>
+          <p>Coloque su dedo en el lector.</p>
+          <div id="fingerprint-animation">
+            <!-- Aquí irá la animación de la huella -->
+          </div>
+          <button id="btn-confirmar-huella">Escanear Huella</button>
+        </div>
+      </div>
+      <!-- MÓDULO DE ALERTA PROFESIONAL -->
+      <div id="custom-alert-modal" class="verification-modal oculto">
+        <div class="verification-content glass-card">
+          <div id="alert-icon"></div>
+          <h2 id="alert-title"></h2>
+          <p id="alert-message"></p>
+          <button id="alert-close-btn">Aceptar</button>
+        </div>
+      </div>
+
+      <!-- MÓDULO DE ESCANEO FACIAL -->
+      <div id="face-scan-modal" class="verification-modal oculto">
+        <div class="verification-content glass-card">
+          <h2 id="face-scan-title">Reconocimiento Facial</h2>
+          <p id="face-scan-message">
+            Por favor, centre su rostro en el recuadro.
+          </p>
+          <div id="face-scan-animation">
+            <!-- La cámara y animación se insertarán aquí -->
+          </div>
+          <button id="btn-confirmar-rostro">Escanear Rostro</button>
+        </div>
+      </div>
+
+      <!-- MÓDULO DE VERIFICACIÓN DE HUELLA (MEJORADO) -->
+      <div id="fingerprint-modal" class="verification-modal oculto">
+        <div class="verification-content glass-card">
+          <h2>Verificación de Huella Dactilar</h2>
+          <p>Coloque su dedo índice en el lector.</p>
+          <div id="fingerprint-pad">
+            <div class="fingerprint-scan-line"></div>
+            <svg id="fingerprint-svg" viewBox="0 0 100 100">
+              <!-- Trazado de la huella dactilar -->
+              <path d="M 50,5 A 45,45 0 1 1 49.9,5.01 M 40,20 Q 45,15 50,20 T 60,20 M 35,30 Q 50,25 65,30 M 30,40 Q 50,35 70,40 M 25,50 Q 50,45 75,50 M 28,60 Q 50,55 72,60 M 32,70 Q 50,65 68,70 M 38,80 Q 50,75 62,80 M 45,90 Q 50,85 55,90"></path>
+            </svg>
+          </div>
+          <button id="btn-confirmar-huella">Escanear Huella</button>
+          <div class="bypass-container">
+            <input type="checkbox" id="bypass-huella-checkbox" />
+            <label for="bypass-huella-checkbox"
+              >No puedo usar la huella (ej. amputación)</label
+            >
           </div>
         </div>
       </div>
